@@ -11,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-        <h1>Hola mundo</h1>
+        <h1>Bienvenido al portal para moteros =D</h1>
     )
   }
 }
