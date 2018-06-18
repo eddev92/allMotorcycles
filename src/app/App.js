@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HomeComponent from './components/home';
 
 class App extends Component {
 
@@ -11,7 +12,7 @@ class App extends Component {
 
   render() {
     return (
-        <h1>Bienvenido al portal para moteros =D</h1>
+      <HomeComponent />
     )
   }
 }

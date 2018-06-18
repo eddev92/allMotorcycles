@@ -3,9 +3,103 @@
   <head>
     <meta charset="UTF-8">
     <title>.:: AllMotorCycles ::.</title>
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">	
+    <link rel="stylesheet" type="text/css" href="css/layout-white.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+
+    	<!-- Google Web Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light|Oswald:400,300,700" rel="stylesheet prefetch" type="text/css">
+        <!-- JavaScripts -->
+        <script type="text/javascript" src="js/prefixfree.min.js"></script>
+        <script type="text/javascript" src="js/modernizr-2.6.2.js"></script>
+        <script type="text/javascript" src="js/iOS-timer.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+        <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="js/jquery.isotope.run.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-touch-swipe-1.0.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+        <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+        <script type="text/javascript" src="js/supersized.shutter.min.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="js/contact_form.js"></script>
+        <script type="text/javascript" src="js/tooltip.js"></script>
+        <script type="text/javascript" src="js/retina.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+
+        <script type="text/javascript">
+
+			var isMobile = false;
+	
+			if( navigator.userAgent.match(/Android/i) || 
+				navigator.userAgent.match(/webOS/i) ||
+				navigator.userAgent.match(/iPhone/i) || 
+				navigator.userAgent.match(/iPad/i)|| 
+				navigator.userAgent.match(/iPod/i) || 
+				navigator.userAgent.match(/BlackBerry/i)){
+								
+				isMobile = true;
+							
+			}
+			
+			/*iOS5 fixed-menu fix*/
+			var iOS5 = false;
+			
+			if (navigator.userAgent.match(/OS 5(_\d)+ like Mac OS X/i)){
+			
+				iOS5 = true;
+			
+			}
+		
+			
+	</script>
+    
+<!-- Google Maps Code -->
+    <script type="text/javascript"
+        src="http://maps.google.com/maps/api/js?sensor=true">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var latlng = new google.maps.LatLng(-37.82179, 144.95302);
+        var myOptions = {
+          zoom: 12,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            myOptions);
+      }
+
+    </script>
+<!-- END Google Maps Code -->
+    
+	<script>
+		$(document).ready(function(){
+			$("nav").sticky({topSpacing:0});
+		});
+	</script>
+
+    <!-- <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39325110-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script> -->
 
   </head>
   <body>
