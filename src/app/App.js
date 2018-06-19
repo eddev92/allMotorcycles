@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HomeComponent from './components/home';
+import MenuComponent from './shared/menu';
 
 class App extends Component {
 
@@ -12,7 +13,10 @@ class App extends Component {
 
   render() {
     return (
-      <HomeComponent />
+      <div>
+          <HomeComponent />
+          <MenuComponent />
+      </div>
     )
   }
 }
