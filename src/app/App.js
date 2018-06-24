@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HomeComponent from './components/home';
 import MenuComponent from './shared/menu';
+import MainStoreComponent from './components/main-store';
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
       <div>
           <HomeComponent />
           <MenuComponent />
+          <MainStoreComponent />
       </div>
     )
   }

@@ -124,32 +124,32 @@ $(document).ready(function () {
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:	[			// Slideshow Images
-			{image : './images/slider/image1.jpg',
-				title : '<h2><span>Responsive</span> Design</h2>',
+			{image : './images/slide_1.jpg',
+				title : '<h2><span>UNA</span>ZORRA .l.</h2>',
 				thumb : '',
 				url : ''
 				},
 
 			{image : './images/slider/image3.jpg',
-				title : '<h2><span>Fullscreen</span> Slideshow</h2>',
+				title : '<h2><span>PERDIDA</span>HIZO .l.</h2>',
 				thumb : '',
 				url : ''
 				},
 
 			{image : './images/slider/image2.jpg',
-				title : '<h2><span>Parallax</span> Background</h2>',
+				title : '<h2><span>ESTA</span>PINCHE .l.</h2>',
 				thumb : '',
 				url : ''
 				},
 
 			{image : './images/slider/image4.jpg',
-				title : '<h2><span>Masonry</span> Portfolio</h2>',
+				title : '<h2><span>PRESENTA</span>CION .l.</h2>',
 				thumb : '',
 				url : ''
 				},
 
 			{image : './images/slider/image5.jpg',
-				title : '<h2><span>Showcase</span> your work</h2>',
+				title : '<h2><span>Dedicación</span>para una reverenda PUTA!</h2>',
 				thumb : '',
 				url : ''
 				}

@@ -7,11 +7,11 @@ class MainStoreComponent extends Component {
             <div id="folio" className="page section">
                 <div className="container">
                     <div className="sixteen columns">
-                        <h1>Portfolio</h1>
-                        <h3><span className="small">Those who do</span> <span className="smallBold">not want to</span>
-                        <br /><span className="largeBold">imitate</span> <span className="large">anything,</span>
-                        <br/><span className="medium">produce</span><span className="mediumBold"> nothing.</span> 
-                        <br/><span className="author">Salvador Dali</span></h3>
+                        <h1>Tienda</h1>
+                        <h3><span className="small">Off</span> <span className="smallBold">Road,</span>
+                        <br /><span className="largeBold">ciudad</span> <span className="large">y sobre todo,</span>
+                        <br/><span className="medium">la mejor</span><span className="mediumBold"> calidad pensando en tu seguridad.</span> 
+                        <br/><span className="author">AllMotorycles Shop Perú</span></h3>
                     
                     </div>
                 </div>

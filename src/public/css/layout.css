@@ -151,7 +151,7 @@ h1 span{
 
 h2 {
 	font-size: 44px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	position: relative;
 }
 h2.white {color: #fff;}
