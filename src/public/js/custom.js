@@ -103,7 +103,7 @@ $(document).ready(function () {
 		random					:	0,			// Randomize slide order (Ignores start slide)
 		slide_interval          :   5000,		// Length between transitions
 		transition				:	2, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-		transition_speed		:	600,		// Speed of transition
+		transition_speed		:	700,		// Speed of transition
 		new_window				:	1,			// Image links open in new window/tab
 		pause_hover             :   0,			// Pause slideshow on hover
 		keyboard_nav            :   1,			// Keyboard navigation on/off
@@ -125,31 +125,31 @@ $(document).ready(function () {
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:	[			// Slideshow Images
 			{image : './images/slide_1.jpg',
-				title : '<h2><span>UNA</span>ZORRA .l.</h2>',
+				title : '<h2>PROTEGIDO Y DECIDIDO MOTERO!</h2>',
 				thumb : '',
 				url : ''
 				},
 
-			{image : './images/slider/image3.jpg',
-				title : '<h2><span>PERDIDA</span>HIZO .l.</h2>',
+			{image : './images/slider_2.jpg',
+				title : '<h2>ENCUENTRA TODO TIPO DE ACCESORIOS PARA UN ESTILO CASUAL...</h2>',
 				thumb : '',
 				url : ''
 				},
 
-			{image : './images/slider/image2.jpg',
-				title : '<h2><span>ESTA</span>PINCHE .l.</h2>',
+			{image : './images/slider_3.jpg',
+				title : '<h2>UN CAFÉ, UNA LLAMADA Y A MOTEAR EN HERMANDAD.</h2>',
 				thumb : '',
 				url : ''
 				},
 
-			{image : './images/slider/image4.jpg',
-				title : '<h2><span>PRESENTA</span>CION .l.</h2>',
+			{image : './images/slider_4.jpg',
+				title : '<h2>NO EXISTE LIMITE QUE NOS DETENGA, SOLO SI ES COMBUSTIBLE O SEGURIDAD.</h2>',
 				thumb : '',
 				url : ''
 				},
 
-			{image : './images/slider/image5.jpg',
-				title : '<h2><span>Dedicación</span>para una reverenda PUTA!</h2>',
+			{image : './images/slider_5.jpg',
+				title : '<h2>PARA VIAJEROS, ENDURO, Y SOBRE TODO PARA TI, HERMANO MOTERO!</h2>',
 				thumb : '',
 				url : ''
 				}

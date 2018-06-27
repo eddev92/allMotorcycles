@@ -8,7 +8,7 @@ class MainStoreComponent extends Component {
                 <div className="container">
                     <div className="sixteen columns">
                         <h1>Tienda</h1>
-                        <h3><span className="small">Off</span> <span className="smallBold">Road,</span>
+                        <h3><span className="small">OFF</span> <span className="smallBold">ROAD,</span>
                         <br /><span className="largeBold">ciudad</span> <span className="large">y sobre todo,</span>
                         <br/><span className="medium">la mejor</span><span className="mediumBold"> calidad pensando en tu seguridad.</span> 
                         <br/><span className="author">AllMotorycles Shop Perú</span></h3>
@@ -25,8 +25,7 @@ class MainStoreComponent extends Component {
                     </ul>
                 </div>
                 
-                <section className="portfolio_container">
-                    
+                <section className="portfolio_container">                    
                     <article className="portfolio" data-category="branding">
                         <section className="thumbImage">
                             <img src="images/gallery/gallery-01-thumb.jpg" alt="" className="fullwidth" />
