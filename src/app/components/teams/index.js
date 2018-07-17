@@ -2,6 +2,18 @@ import React, { Component } from 'React';
 import '../../styles/teams.css';
 
 class TeamsComponent extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+    knowMore() {
+        console.log('open modal')
+    }
+
     render() {
         return (
             <div id="services" class="page section">
@@ -22,7 +34,7 @@ class TeamsComponent extends Component {
                                 <div class="serviceInfoBack">
                                     <h3>Club Motero de Marcianos</h3>
                                     <p>Más que un Team, una familia. Desde tiempos inmemorables, 3 locos sobre ruedas, A motear!</p>
-                                    <button type="button" className="btn btn-outline-default waves-effect">Saber más</button>
+                                    <button type="button" onClick={this.knowMore} className="btn btn-outline-default waves-effect">Saber más</button>
                                 </div>
                             </div>
                         </div>
