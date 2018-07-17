@@ -1,9 +1,9 @@
 [
     {
         "idProduct": "G00001",
-        "categoryId": "GLVS",
-        "Name": "guantes pw",
-        "Price": "100.00",
+        "categoryId": "GLVS#AMS",
+        "name": "guantes pw",
+        "price": "100.00",
         "SpecificationId": "",
         "stock": 0,
         "soldQuantity": "",
@@ -12,8 +12,8 @@
     {
         "idProduct": "C00001",
         "categoryId": "JCKT#AMS",
-        "Name": "casaca pw",
-        "Price": "100.00",
+        "name": "casaca pw",
+        "price": "100.00",
         "SpecificationId": "",
         "stock": 0,
         "soldQuantity": "",
@@ -22,8 +22,8 @@
     {
         "idProduct": "P00001",
         "categoryId": "PNTS#AMS",
-        "Name": "pantalon pw",
-        "Price": "60.00",
+        "name": "pantalon pw",
+        "price": "60.00",
         "SpecificationId": "",
         "stock": 0,
         "soldQuantity": "",

@@ -1,0 +1,13 @@
+#portfolio {
+    height: auto !important;
+}
+/* scale3d(0.001, 0.001, 1);
+para ocultar elemento store
+*/
+.portfolio.isotope-item.hidden {
+    transform: translate3d(0px, 0px, 0px) scale3d(0.001, 0.001, 1) !important;
+
+}
+.portfolio.isotope-item{
+    /* position: initial !important; */
+}
