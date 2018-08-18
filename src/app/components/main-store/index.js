@@ -7,7 +7,7 @@ class MainStoreComponent extends Component {
       super(props);
       this.state = {
           products: [],
-          categoryActive: 0
+          categoryActive: ''
       }
   }
     componentDidMount() {
@@ -35,7 +35,7 @@ class MainStoreComponent extends Component {
             console.log(categoryActive)
             const prods = products.map((prod, index) => {
                 return (
-                    <article className={(categoryActive > 0 ) ? 'portfolio isotope-item isotope-hidden' : 'portfolio isotope-item'} key={index} data-category={prod.categoryId}>
+                    <article className={(categoryActive != prod.categoryId ) ? 'portfolio isotope-item isotope-hidden' : 'portfolio isotope-item'} key={index} data-category={prod.categoryId}>
                             <section className="thumbImage">
                                 <img src="images/gallery/gallery-01-thumb.jpg" alt="" className="fullwidth" />
                                 <div className="thumbTextWrap">
@@ -83,9 +83,9 @@ class MainStoreComponent extends Component {
                         {/* <li><a data-filter="article.portfolio[data-category~='video']">Video</a></li> 
                     </ul> */}
                     <div className="col-md-3">Todos</div>
-                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 1)}>Casacas</div>
-                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 2)}>Guantes</div>
-                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 3)}>Pantalones</div>
+                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 'JCKT#AMS')}>Casacas</div>
+                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 'GLVS#AMS')}>Guantes</div>
+                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 'PNTS#AMS')}>Pantalones</div>
                 </div>
                 
              <section className="portfolio_container" id="portfolio">
