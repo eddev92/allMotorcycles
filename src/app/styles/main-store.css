@@ -1,0 +1,8 @@
+.isotope-hidden {
+    width: 256px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate3d(256px, 0px, 0px) scale3d(0.001, 0.001, 1);
+    opacity: 0;
+}

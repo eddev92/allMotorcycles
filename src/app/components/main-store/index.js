@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './../../styles/main-store.css';
 import ProductsServices from '../../services/products.service';
 
 class MainStoreComponent extends Component {
@@ -15,7 +16,7 @@ class MainStoreComponent extends Component {
     selectCategory(index) {
         const { categoryActive } = this.state;
         console.log(index)
-        setState({ categoryActive: index })
+        this.setState({ categoryActive: index })
     }
     getAllProductsStore() {
         const service = new ProductsServices();
@@ -34,7 +35,7 @@ class MainStoreComponent extends Component {
             console.log(categoryActive)
             const prods = products.map((prod, index) => {
                 return (
-                    <article className={(categoryActive > 0 ) ? 'portfolio isotope-item hidden' : 'portfolio isotope-item'} key={index} data-category={prod.categoryId}>
+                    <article className={(categoryActive > 0 ) ? 'portfolio isotope-item isotope-hidden' : 'portfolio isotope-item'} key={index} data-category={prod.categoryId}>
                             <section className="thumbImage">
                                 <img src="images/gallery/gallery-01-thumb.jpg" alt="" className="fullwidth" />
                                 <div className="thumbTextWrap">
@@ -73,14 +74,18 @@ class MainStoreComponent extends Component {
                     
                     </div>
                 </div>
-                <div className="gallerySelector">
-                    <ul className="gallerySelectorList">
+                <div className="gallerySelector row">
+                    {/* <ul className="gallerySelectorList">
                         <li className="current"><a data-filter="article.portfolio">All</a></li>
-                        <li><a onClick={this.selectCategory.bind(this, 1)} data-filter="article.portfolio[data-category~='JCKT#AMS']">Casacas</a></li>
-                        <li><a data-filter="article.portfolio[data-category~='PNTS#AMS']" onClick={this.selectCategory.bind(this, 2)}>Pantalon</a></li>
-                        <li><a data-filter="article.portfolio[data-category~='GLVS#AMS']" onClick={this.selectCategory.bind(this, 3)}>Guantes</a></li>
-                        {/* <li><a data-filter="article.portfolio[data-category~='video']">Video</a></li> */}
-                    </ul>
+                        <li onClick={this.selectCategory.bind(this, 1)}><a data-filter="article.portfolio[data-category~='JCKT#AMS']">Casacas</a></li>
+                        <li onClick={this.selectCategory.bind(this, 2)}><a data-filter="article.portfolio[data-category~='PNTS#AMS']">Pantalon</a></li>
+                        <li onClick={this.selectCategory.bind(this, 3)}><a data-filter="article.portfolio[data-category~='GLVS#AMS']">Guantes</a></li>
+                        {/* <li><a data-filter="article.portfolio[data-category~='video']">Video</a></li> 
+                    </ul> */}
+                    <div className="col-md-3">Todos</div>
+                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 1)}>Casacas</div>
+                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 2)}>Guantes</div>
+                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 3)}>Pantalones</div>
                 </div>
                 
              <section className="portfolio_container" id="portfolio">
