@@ -1,4 +1,11 @@
 .main-side {
-    max-height: 1000px;
+    height: 1000px;
     background-color: red;
+    position: fixed;
+    width: 100%;
+    margin-top: -100%;
+    transition: 2s ease-out;
+}
+.main-side.showSide{
+    margin-top: 0;
 }

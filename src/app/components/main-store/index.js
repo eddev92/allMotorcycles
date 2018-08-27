@@ -35,7 +35,7 @@ class MainStoreComponent extends Component {
             console.log(categoryActive)
             const prods = products.map((prod, index) => {
                 return (
-                    <article className={(categoryActive != prod.categoryId ) ? 'portfolio isotope-item isotope-hidden' : 'portfolio isotope-item'} key={index} data-category={prod.categoryId}>
+                    <article className={(categoryActive === prod.categoryId ) ? 'portfolio isotope-item' : 'portfolio isotope-item isotope-hidden'} key={index} data-category={prod.categoryId}>
                             <section className="thumbImage">
                                 <img src="images/gallery/gallery-01-thumb.jpg" alt="" className="fullwidth" />
                                 <div className="thumbTextWrap">
@@ -75,58 +75,14 @@ class MainStoreComponent extends Component {
                     </div>
                 </div>
                 <div className="gallerySelector row">
-                    {/* <ul className="gallerySelectorList">
-                        <li className="current"><a data-filter="article.portfolio">All</a></li>
-                        <li onClick={this.selectCategory.bind(this, 1)}><a data-filter="article.portfolio[data-category~='JCKT#AMS']">Casacas</a></li>
-                        <li onClick={this.selectCategory.bind(this, 2)}><a data-filter="article.portfolio[data-category~='PNTS#AMS']">Pantalon</a></li>
-                        <li onClick={this.selectCategory.bind(this, 3)}><a data-filter="article.portfolio[data-category~='GLVS#AMS']">Guantes</a></li>
-                        {/* <li><a data-filter="article.portfolio[data-category~='video']">Video</a></li> 
-                    </ul> */}
-                    <div className="col-md-3">Todos</div>
-                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 'JCKT#AMS')}>Casacas</div>
-                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 'GLVS#AMS')}>Guantes</div>
-                    <div className="col-md-3" onClick={this.selectCategory.bind(this, 'PNTS#AMS')}>Pantalones</div>
-                </div>
-                
-             <section className="portfolio_container" id="portfolio">
-                {this.renderProducts()}
-                    {/* <article className="portfolio" data-category="JCKT#AMS">
-                        <section className="thumbImage">
-                            <img src="images/gallery/gallery-17-thumb.jpg" alt="" className="fullwidth" />
-                            <div className="thumbTextWrap">
-                                <div className="thumbText">
-                                    <h3 className="sectionTitle">Gallery Item</h3>
-                                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                                    <a className="thumbLink" href="images/gallery/gallery-17.jpg" rel="prettyPhoto[gallery1]" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum."><i className="icon-search"></i></a>
-                                </div>
-                            </div>
-                        </section>
-                    </article>
-                    <article className="portfolio" data-category="PNTS#AMS">
-                        <section className="thumbImage">
-                            <img src="images/gallery/gallery-18-thumb.jpg" alt="" className="fullwidth" />
-                            <div className="thumbTextWrap">
-                                <div className="thumbText">
-                                    <h3 className="sectionTitle">Gallery Item</h3>
-                                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                                    <a className="thumbLink" href="images/gallery/gallery-18.jpg" rel="prettyPhoto[gallery1]" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum."><i className="icon-search"></i></a>
-                                </div>
-                            </div>
-                        </section>
-                    </article>
-                    <article className="portfolio" data-category="GLVS#AMS">
-                        <section className="thumbImage">
-                            <img src="images/gallery/gallery-18-thumb.jpg" alt="" className="fullwidth" />
-                            <div className="thumbTextWrap">
-                                <div className="thumbText">
-                                    <h3 className="sectionTitle">Gallery Item</h3>
-                                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                                    <a className="thumbLink" href="images/gallery/gallery-18.jpg" rel="prettyPhoto[gallery1]" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum."><i className="icon-search"></i></a>
-                                </div>
-                            </div>
-                        </section>
-                    </article> */}
-             </section>
+                    <div className="col-md-3 click-menu">Todos</div>
+                    <div className="col-md-3 click-menu" onClick={this.selectCategory.bind(this, 'JCKT#AMS')}>Casacas</div>
+                    <div className="col-md-3 click-menu" onClick={this.selectCategory.bind(this, 'GLVS#AMS')}>Guantes</div>
+                    <div className="col-md-3 click-menu" onClick={this.selectCategory.bind(this, 'PNTS#AMS')}>Pantalones</div>
+                </div>                
+                <section className="portfolio_container" id="portfolio">
+                    {this.renderProducts()}
+                </section>
                 <div className="portfolioBottom" />
         </div>
         );

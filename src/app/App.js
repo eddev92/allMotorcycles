@@ -7,21 +7,32 @@ import PaneSideComponent from './shared/pane-side';
 
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
         this.state = {
+          show: false
         }
     }
-
+    openModalMoteando() {
+      const { show } = this.state;
+      this.setState({ show: true });
+    }
 
   render() {
+    const { show } = this.state;
+
     return (
-      <div className="main-app">
-          <PaneSideComponent />
-          <HomeComponent />
-          <MenuComponent />
-          <MainStoreComponent />
-          <TeamsComponent />
+      <div>
+        <PaneSideComponent show={show} />
+        {/* <MenuComponent handleClick={this.openModalMoteando}/> */}
+        <MenuComponent/>
+      {/* { !show && */}
+          <div className="main-app">
+            <HomeComponent />
+            <MainStoreComponent />
+            <TeamsComponent />
+        </div>
+      {/* } */}
       </div>
     )
   }

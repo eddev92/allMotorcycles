@@ -6,3 +6,13 @@
     transform: translate3d(256px, 0px, 0px) scale3d(0.001, 0.001, 1);
     opacity: 0;
 }
+.click-menu{
+    cursor: pointer;
+    text-align: center;
+    padding: 14px;
+}
+.isotope-item{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}

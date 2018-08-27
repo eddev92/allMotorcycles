@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'React';
 
-class MenuComponent extends Component {
-    render() {
+const MenuComponent = ({ handleClick }) => {
         return (
             <nav>	
                 <div className="container">
@@ -10,7 +9,8 @@ class MenuComponent extends Component {
                             <li><a href="#homepage">Inicio</a></li>
                             <li><a href="#folio">Tienda</a></li>
                             <li><a href="#services">Teams</a></li>
-                            {/* <li><a href="#about">About</a></li>
+                            <li><a href="#about" onClick={handleClick} >Moteando...</a></li>
+                            {/* 
                             
                             <li><a href="#features">Features</a></li>
                             <li><a href="#contact">Contact</a></li>
@@ -30,8 +30,6 @@ class MenuComponent extends Component {
                 </div>
             </nav>
         );
-    }
-
 };
 
 export default MenuComponent;
