@@ -18,6 +18,15 @@
     background-size: cover;
     height: 80%;
     opacity: 0.9;
+    transition: 0.8s ease-out all;
+    right: 0;
+}
+.pane-content-info{
+    opacity: 0;
+    transition: 1s ease-out all;    
+    position: absolute;
+    bottom: 0%;
+
 }
 .main-side .row{
     position: absolute;
@@ -33,6 +42,18 @@
     height: 90%;
 }
 .int-card p{    
-    padding: 30px 0;
+    padding: 30px 0 0;
     margin: 35px;
+}
+.goLeft{
+    right: 30% !important;
+}
+.hidden-div{
+    opacity: 1 !important;
+    position: absolute;
+    bottom: 0%;
+    right: 3%;
+    background: black;
+    transition: 0.3s ease-out all;
+    height: 85%;
 }

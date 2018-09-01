@@ -36,7 +36,7 @@ class App extends Component {
         {/* <MenuComponent/> */}
       { !show &&
           <div className="main-app">
-            <HomeComponent />
+          <HomeComponent />
             <MainStoreComponent />
             <TeamsComponent />
         </div>
