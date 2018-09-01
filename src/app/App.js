@@ -13,26 +13,34 @@ class App extends Component {
           show: false
         }
     }
-    openModalMoteando() {
+    componentDidMount() {}
+
+    openModalMoteando(index) {
       const { show } = this.state;
-      this.setState({ show: true });
+      console.log('abrir modal moteando')
+      if (index === 4) {
+        this.setState({ show: true });
+      }
+      else {
+        this.setState({ show: false });
+      }
     }
 
   render() {
     const { show } = this.state;
-
+    console.log(show)
     return (
       <div>
         <PaneSideComponent show={show} />
-        {/* <MenuComponent handleClick={this.openModalMoteando}/> */}
-        <MenuComponent/>
-      {/* { !show && */}
+        <MenuComponent handleClick={this.openModalMoteando.bind(this)}/>
+        {/* <MenuComponent/> */}
+      { !show &&
           <div className="main-app">
             <HomeComponent />
             <MainStoreComponent />
             <TeamsComponent />
         </div>
-      {/* } */}
+      }
       </div>
     )
   }

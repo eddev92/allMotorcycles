@@ -1,11 +1,38 @@
 .main-side {
-    height: 1000px;
-    background-color: red;
+    height: 100%;
+    /* background-color: red; */
+    background-repeat: no-repeat;
+    background-size: cover;
     position: fixed;
     width: 100%;
     margin-top: -100%;
-    transition: 2s ease-out;
+    transition: 1.6s ease-out all;
 }
 .main-side.showSide{
     margin-top: 0;
+    transition: 1.6s ease-out all;
+}
+.main-side .card{
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+    height: 80%;
+    opacity: 0.9;
+}
+.main-side .row{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.main-side .black-shadow{
+    height: 100%;
+}
+.int-card{
+    height: 90%;
+}
+.int-card p{    
+    padding: 30px 0;
+    margin: 35px;
 }

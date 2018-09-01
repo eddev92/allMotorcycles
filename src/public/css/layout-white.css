@@ -238,6 +238,7 @@ blockquote:after {
 	overflow:hidden;
 	z-index:1;
 	margin-bottom: -70px;
+	height: 631px;
 }
 .page{
 	position:relative;

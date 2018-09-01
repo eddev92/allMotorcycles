@@ -1,15 +1,15 @@
 import React from 'React';
 
-const MenuComponent = ({ handleClick }) => {
+const MenuComponent = ({ handleClick = () => {} }) => {
         return (
             <nav>	
                 <div className="container">
                     <div className="sixteen columns">
                         <ul className="menu" id="nav">
-                            <li><a href="#homepage">Inicio</a></li>
-                            <li><a href="#folio">Tienda</a></li>
-                            <li><a href="#services">Teams</a></li>
-                            <li><a href="#about" onClick={handleClick} >Moteando...</a></li>
+                            <li><a href="#homepage" onClick={handleClick.bind(this, 1)} >Inicio</a></li>
+                            <li><a href="#folio" onClick={handleClick.bind(this, 2)} >Tienda</a></li>
+                            <li><a href="#services" onClick={handleClick.bind(this, 3)} >Teams</a></li>
+                            <li><a href="#about" onClick={handleClick.bind(this, 4)} >Moteando...</a></li>
                             {/* 
                             
                             <li><a href="#features">Features</a></li>
