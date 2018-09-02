@@ -7,20 +7,42 @@ class PaneSideComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            option: 0
+            option: 0,
+            addTravelActive: false,
+            modelTravel: {
+                fullName: '',
+                destinity: '',
+                dateDeparture: '',
+                dateReturn: '',
+                startingPoint: '',
+                currentCity: ''
+            }
         }
     }
-
+    handleChange(evt, key) {
+        const model = { ...this.state.modelTravel };
+        console.log(evt.target.value)
+        console.log(evt.target)
+        console.log(key)
+        
+    }
     selectOption(index) {
         this.setState({ option: index });
     }
     resetOption() {
         this.setState({ option: 0 });
     }
+    addTravel() {
+        this.setState({ addTravelActive: true });
+    }
+    handleForm(form) {
+        console.log(form)
+    }
     render() {
-        const { option } = this.state;
+        const { option, addTravelActive, modelTravel } = this.state;
         const { show } = this.props;
         console.log('option', option)
+        console.log(modelTravel)
         const style = classNames(
             'card card-image mb-3 col-md-3',
             {'goLeft': option > 0}
@@ -39,8 +61,7 @@ class PaneSideComponent extends Component {
                             <div className="int-card">
                                 <h3 class="card-title pt-2"><strong className="text-white">PLANIFICA UN VIAJE</strong></h3>
                                 <p>Piensa la ruta más larga y divertida que puedas hacer... Ahora imagínate poder publicarla y viajar en grupo con tu hermandad.</p>
-                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 1)}><i class="fa fa-clone left"></i>PLANIFICAR</a>
-                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 4)}><i class="fa fa-clone left"></i>VER VIAJES</a>
+                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 1)}><i class="fa fa-clone left"></i>VIAJAR</a>
                             </div>
                         </div>
                     {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
@@ -73,10 +94,10 @@ class PaneSideComponent extends Component {
                     </div>
                 }
                 <div className={styleContentInfo}>
-                       <PaneSideContent />
-                    </div>
+                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this, '')} model={modelTravel}/>
                 </div>
             </div>
+        </div>
         );
     };
 }

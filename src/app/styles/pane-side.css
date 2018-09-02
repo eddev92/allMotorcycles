@@ -20,6 +20,7 @@
     opacity: 0.9;
     transition: 0.8s ease-out all;
     right: 0;
+    z-index: 9999;
 }
 .pane-content-info{
     opacity: 0;
