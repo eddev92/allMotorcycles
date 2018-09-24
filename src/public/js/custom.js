@@ -26,15 +26,15 @@ $(document).ready(function () {
 
 
 //MENU --------------------------------------------------------------------------------/
-	$(".menu a").click(function () {
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 1000,
-            easing: "swing"
-        });
-        return false;
-    });
+	// $(".menu a").click(function () {
+    //     $("html, body").animate({
+    //         scrollTop: $($(this).attr("href")).offset().top + "px"
+    //     }, {
+    //         duration: 1000,
+    //         easing: "swing"
+    //     });
+    //     return false;
+    // });
 
 
 //PARALLAX ----------------------------------------------------------------------------/

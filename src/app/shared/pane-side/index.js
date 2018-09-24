@@ -16,15 +16,18 @@ class PaneSideComponent extends Component {
                 dateReturn: '',
                 startingPoint: '',
                 currentCity: ''
-            }
+            },
+            travels: []
         }
     }
     handleChange(evt, key) {
         const model = { ...this.state.modelTravel };
-        console.log(evt.target.value)
-        console.log(evt.target)
+        console.log(model, 'model')
+        console.log(evt.target.value, 'evt.target.value')
+        console.log(evt.target.id, 'evt.target.id')
         console.log(key)
-        
+        model[evt.target.id] = evt.target.value;
+        this.setState({ modelTravel: model });
     }
     selectOption(index) {
         this.setState({ option: index });
@@ -35,12 +38,19 @@ class PaneSideComponent extends Component {
     addTravel() {
         this.setState({ addTravelActive: true });
     }
-    handleForm(form) {
-        console.log(form)
+    handleForm() {
+        const { travels, modelTravel } = this.state;
+        if (modelTravel) {
+            travels.push(modelTravel);
+        }
+        this.setState({ travels})
+        console.log(modelTravel, 'form')
+        console.log(travels, 'travels')
+        
     }
     render() {
-        const { option, addTravelActive, modelTravel } = this.state;
-        const { show } = this.props;
+        const { option, addTravelActive, modelTravel, travels } = this.state;
+        const { show, handleOptionRoadOrTip, optionRoadOrTip, resetValuesRoad, openModal } = this.props;
         console.log('option', option)
         console.log(modelTravel)
         const style = classNames(
@@ -56,7 +66,7 @@ class PaneSideComponent extends Component {
                 <div className="row">
                 {
                 (option === 1 || option === 0 || option === 4) &&
-                <div className={style} style={{backgroundImage: 'url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg)'}}>
+                <div className={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
                                 <h3 class="card-title pt-2"><strong className="text-white">PLANIFICA UN VIAJE</strong></h3>
@@ -69,12 +79,12 @@ class PaneSideComponent extends Component {
                 }
                 {
                 (option === 2 || option === 0) &&
-                    <div className={style} style={{backgroundImage: 'url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg)'}}>
+                    <div className={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
                                 <h3 className="card-title pt-2"><strong className="text-white">RUTAS Y TIPS</strong></h3>
                                 <p>Ahora puedes conocer los mejores tips para esa ruta que pronto conquistarás. Conoce de nuestras rutas exploradas y anímate a viajar.</p>
-                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 2)}><i class="fa fa-clone left"></i>SABER MÁS</a>
+                                {option !== 2 && <a className="btn btn-pink" onClick={this.selectOption.bind(this, 2)}><i class="fa fa-clone left"></i>SABER MÁS</a>}
                             </div>
                         </div>
                         {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
@@ -82,7 +92,7 @@ class PaneSideComponent extends Component {
                 }
                 {
                 (option === 3 || option === 0) &&
-                    <div class={style} style={{backgroundImage: 'url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg)'}}>
+                    <div class={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
                                 <h3 className="card-title pt-2"><strong className="text-white">MOTOS</strong></h3>
@@ -94,7 +104,7 @@ class PaneSideComponent extends Component {
                     </div>
                 }
                 <div className={styleContentInfo}>
-                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this, '')} model={modelTravel}/>
+                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} />
                 </div>
             </div>
         </div>

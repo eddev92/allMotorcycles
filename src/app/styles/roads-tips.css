@@ -1,0 +1,22 @@
+.main-roads-tips{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0;
+}
+.road, .tip {
+    transition: 0.6s ease-in-out all;
+    height: 100%;
+}
+.road.col-md-3:hover, .tip.col-md-3:hover {
+    background-color: blue;
+    transition: 0.6s ease-in-out all;
+}
+.hidden-element {
+    display: none;
+}
+.linkTo{
+    cursor: pointer;
+    margin-top: 100%;
+}

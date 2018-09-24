@@ -1,0 +1,17 @@
+.fade.show {
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    max-height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.fade{
+    transition: opacity .15s linear;
+}
+.modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#modalRoads button{
+    margin: auto;
+}
