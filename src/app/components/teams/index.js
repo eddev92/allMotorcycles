@@ -26,35 +26,37 @@ class TeamsComponent extends Component {
                         <br /><span class="medium">por ahora.</span> <span class="mediumBold"></span> 
                         </h3>
                     </div>
-                <div class="one-third column">
-                    <div class="serviceItem creativity">
-                        <div class="serviceInfoWrap">
-                            <div class="serviceInfo">
-                                <div class="serviceInfoFront"></div>
-                                <div class="serviceInfoBack">
-                                    <h3>Club Motero de Marcianos</h3>
-                                    <p>Más que un Team, una familia. Desde tiempos inmemorables, 3 locos sobre ruedas, A motear!</p>
-                                    <button type="button" onClick={this.knowMore} className="btn btn-outline-default waves-effect">Saber más</button>
+                    <div className="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="serviceItem creativity">
+                                <div class="serviceInfoWrap">
+                                    <div class="serviceInfo">
+                                        <div class="serviceInfoFront"></div>
+                                        <div class="serviceInfoBack">
+                                            <h3>Club Motero de Marcianos</h3>
+                                            <p>Más que un Team, una familia. Desde tiempos inmemorables, 3 locos sobre ruedas, A motear!</p>
+                                            <button type="button" onClick={this.knowMore} className="btn btn-outline-default waves-effect">Saber más</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="one-third column">
-                    <div class="serviceItem strategy">
-                        <div class="serviceInfoWrap">
-                            <div class="serviceInfo">
-                                <div class="serviceInfoFront"></div>
-                                <div class="serviceInfoBack">
-                                    <h3>Los Piratas</h3>
-                                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="serviceItem strategy">
+                                <div class="serviceInfoWrap">
+                                    <div class="serviceInfo">
+                                        <div class="serviceInfoFront"></div>
+                                        <div class="serviceInfoBack">
+                                            <h3>Los Piratas</h3>
+                                            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="one-third column">
-                    <div class="serviceItem development">
+                    
+                        <div class="col-xs-12 col-md-4">
+                        <div class="serviceItem development">
                         <div class="serviceInfoWrap">
                             <div class="serviceInfo">
                                 <div class="serviceInfoFront"></div>
@@ -65,6 +67,8 @@ class TeamsComponent extends Component {
                             </div>
                         </div>
                     </div>
+                        </div>
+                 
                 </div>
                 <div class="ten columns marginTop">
                     <p class="introtext">

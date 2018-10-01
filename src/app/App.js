@@ -70,9 +70,9 @@ class App extends Component {
         <MenuComponent handleClick={this.openModalMoteando.bind(this)}/>
         {/* <MenuComponent/> */}
       { !show &&
-          <div className="main-app">
+          <div className="main-app" style={{paddingTop: '50px'}}>
           <HomeComponent />
-            <MainStoreComponent />
+            {/* <MainStoreComponent /> */}
             <TeamsComponent />
         </div>
       }

@@ -2,7 +2,7 @@ import React from 'React';
 
 const MenuComponent = ({ handleClick = () => {} }) => {
         return (
-            <nav>	
+            <nav style={{position: 'fixed'}}>	
                 <div className="container">
                     <div className="sixteen columns">
                         <ul className="menu" id="nav">

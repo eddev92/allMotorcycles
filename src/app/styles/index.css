@@ -1,3 +1,9 @@
 .hidden-div{
     display: none;
 }
+.main-app{
+    padding-top: 50px;
+}
+body{
+    height: 100%;
+}
