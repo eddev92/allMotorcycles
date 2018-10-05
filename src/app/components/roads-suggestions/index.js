@@ -52,9 +52,6 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
 
             </div>
         </div>
-        // <div className="main-roads-tips" style={{backgroundImage: 'url(images/roads-tips.jpg)'}}>
-        //     <h2 className="text-white">Rutas y tips</h2>
-        // </div>
     )
 }
 

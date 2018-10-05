@@ -33,13 +33,6 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
                             {travels.length &&
                                 rows
                             }
-                            {/* <tr>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                </tr>
-                            <tr/> */}
                         </tbody>
                     </table>
                 </div>
