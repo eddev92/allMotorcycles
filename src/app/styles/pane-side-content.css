@@ -10,7 +10,12 @@
 }
 .add-travel{
     height: 100px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
+    width: 90%;
+    bottom: 0%;
+    position: absolute;
+    /* margin: 0; */
+    margin: 16px;
 }
 .main-travels{
     margin-top: 11px;

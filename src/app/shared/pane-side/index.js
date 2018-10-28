@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PaneSideContent from './pane-side-content';
 import classNames from 'classnames';
 import '../../styles/pane-side.css';
+import RoadsService from '../../services/roads.service';
 
 class PaneSideComponent extends Component {
     constructor(props) {
@@ -20,12 +21,11 @@ class PaneSideComponent extends Component {
             travels: []
         }
     }
+    componentDidMount() {
+        this.getRoads();
+    }
     handleChange(evt, key) {
         const model = { ...this.state.modelTravel };
-        console.log(model, 'model')
-        console.log(evt.target.value, 'evt.target.value')
-        console.log(evt.target.id, 'evt.target.id')
-        console.log(key)
         model[evt.target.id] = evt.target.value;
         this.setState({ modelTravel: model });
     }
@@ -34,6 +34,17 @@ class PaneSideComponent extends Component {
     }
     resetOption() {
         this.setState({ option: 0 });
+    }
+    getRoads() {
+        const service = new RoadsService();
+        service.getRoads()
+            .then((response) => {
+                this.setState({ travels: response });
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }
     addTravel() {
         this.setState({ addTravelActive: true });
