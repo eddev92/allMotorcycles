@@ -18,7 +18,7 @@ class HomeComponent extends Component {
         return(
             <div id="homepage" className="homepage section">
                 
-                <div className="container-fluid">
+                <div className="container">
                     
                     {/* <img alt="" className="logo" src="images/logo.png" /> */}
                     <Slider {...settings}>

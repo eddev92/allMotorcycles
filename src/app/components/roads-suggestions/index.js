@@ -39,7 +39,7 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
                                                 googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
                                                 isMarkerShown={true}
                                                 loadingElement={<div style={{ height: `100%` }} />}
-                                                containerElement={<div style={{ height: `280px`, marginTop: '50px' }} />}
+                                                containerElement={<div style={{ height: `320px`, marginTop: '50px' }} />}
                                                 mapElement={<div style={{ height: `100%` }} />}
                                                 backOptions={resetValuesRoad}
                                                 showRoads={openModal}

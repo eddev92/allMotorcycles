@@ -41,8 +41,14 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
                 }
                 {
                     !addTravelActive && 
-                    <div className="add-travel text-center">
-                        <button type="button" className="btn btn-outline-primary waves-effect" onClick={addTravel}>Agregar un viaje</button>
+                    <div>
+                         <div className="suggestion-add-travel text-center">
+                            <p>(*)</p>
+                            <p>Cada viaje registrado pasará por un proceso de auditoría y aprobración por la administración de AllMotorcycles Perú. De cumplir con los requisitos, este será publicado en la tabla de viajes dentro de las 24 horas.</p>
+                        </div>
+                        <div className="add-travel text-center">
+                            <button type="button" className="btn btn-outline-primary waves-effect" onClick={addTravel}>Agregar un viaje</button>
+                        </div>
                     </div>
                 }
                 {

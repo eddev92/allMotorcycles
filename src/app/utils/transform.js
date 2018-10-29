@@ -6,14 +6,14 @@ class Transform {
                 label: obj.destinity
             },
             {
-                label: obj.dateDeparture
+                label: obj.dateSal
             },
             {
                 // estado del viaje en base a la fecha de retorno < fecha acutal
                 label: obj.dateReturn
             },
             {
-                label: obj.fullName
+                label: obj.names
             }
         ]
 

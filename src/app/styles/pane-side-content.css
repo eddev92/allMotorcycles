@@ -19,7 +19,7 @@
 }
 .main-travels{
     margin-top: 11px;
-    max-height: 240px;
+    max-height: 300px;
     overflow-y: auto;
 }
 .main-content-pane .row{
@@ -34,6 +34,9 @@
 }
 .add-travel-form{
     padding-top: 20px;
+    position: absolute;
+    bottom: 20%;
+    width: 95%;
 }
 .add-travel-form button{
     width: 100%;
@@ -47,6 +50,11 @@
 }
 .add-travel-form label{
     color: white;
+}
+.suggestion-add-travel{
+    border: 1px solid white;
+    color: white;
+    margin: 50px 80px;
 }
 .empty-travels{
     height: 200px;
