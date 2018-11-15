@@ -1,25 +1,25 @@
 var bodyParser = require('body-parser').json();
 
 module.exports = (app, db) => {
-    registerRoad = (req, res) => {
-		console.log('REQ: ', req);
-        console.log('RES: ', res);
-              db.roads.create({  
-                names: req.body.names,
-                destinity: req.body.destinity,
-                dateSal: req.body.dateSal,
-                dateReturn: req.body.dateReturn,
-                point: req.body.point,
-                city: req.body.city
-              }).then((result) => {
-                console.log('REISTRO EXITOSO POST: ', result);
-                res.json(result)
-              })
-              .catch((error) => {
-                console.log('_ERROR REISTRO EXITOSO: ', error);
-                res.json(error);
-              })
-    }
+    // registerRoad = (req, res) => {
+		// console.log('REQ: ', req);
+    //     console.log('RES: ', res);
+    //           db.roads.create({  
+    //             names: req.body.names,
+    //             destinity: req.body.destinity,
+    //             dateSal: req.body.dateSal,
+    //             dateReturn: req.body.dateReturn,
+    //             point: req.body.point,
+    //             city: req.body.city
+    //           }).then((result) => {
+    //             console.log('REISTRO EXITOSO POST: ', result);
+    //             res.json(result)
+    //           })
+    //           .catch((error) => {
+    //             console.log('_ERROR REISTRO EXITOSO: ', error);
+    //             res.json(error);
+    //           })
+    // }
 }
 
 //   app.get('/state', (req, res) => {

@@ -1,0 +1,51 @@
+[
+    {
+        "motorcycleCode": "MTR#CMMRN20",
+        "name": "La negra",
+        "cc": "200",
+        "year": "2018",
+        "km": "5,000",
+        "chasis": "JKDLSAHDAKLSD",
+        "color": "Negro y rojo",
+        "brand": "Ronco",
+        "model": "Aggressor",
+        "plate": "DASS-A3"
+    },
+    {
+        "motorcycleCode": "MTR#CMM190",
+        "name": "Axelito",
+        "cc": "190",
+        "year": "2017",
+        "km": "8000",
+        "chasis": "SDNAKJDHASJKDHAS",
+        "color": "Negro",
+        "brand": "Honda",
+        "model": "cbr190",
+        "plate": "SADS-A2"
+    },
+    {
+        "motorcycleCode": "MTR#CMMMAX200",
+        "name": "Unknown",
+        "cc": "200",
+        "year": "2018",
+        "km": "15000",
+        "chasis": "SAKOPURMTYYYE",
+        "color": "negro con blanco",
+        "brand": "DAVEST",
+        "model": "MAX200+",
+        "plate": "4602-FA"
+    },
+    ,
+    {
+        "motorcycleCode": "MTR#XXXXX",
+        "name": "",
+        "cc": "",
+        "year": "",
+        "km": "",
+        "chasis": "",
+        "color": "",
+        "brand": "",
+        "model": "",
+        "plate": ""
+    }
+]

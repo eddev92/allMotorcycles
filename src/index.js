@@ -30,16 +30,14 @@ db.sequelize
 app.set('port', process.env.PORT || 3000);
 // poblar tabla roads
 db.sequelize.sync().then(() => {
-    db.roads.bulkCreate(
-        lodash.times(10, () => ({
-                names: 'Edward',
-                destinity: 'lunahuana',
-                dateSal: new Date(),
-                dateReturn: new Date(),
-                point: 'mi jato',
-                city: 'lima'
-        }))
-    );
+    db.roads.bulkCreate({
+                names: '',
+                destinity: '',
+                dateSal: '',
+                dateReturn: '',
+                point: '',
+                city: ''
+        })
 });
 
 apiRoads(app, db);

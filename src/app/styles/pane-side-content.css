@@ -19,7 +19,7 @@
 }
 .main-travels{
     margin-top: 11px;
-    max-height: 300px;
+    max-height: 285px;
     overflow-y: auto;
 }
 .main-content-pane .row{
@@ -35,8 +35,9 @@
 .add-travel-form{
     padding-top: 20px;
     position: absolute;
-    bottom: 20%;
+    bottom: 7%;
     width: 95%;
+    margin-bottom: -15px;
 }
 .add-travel-form button{
     width: 100%;

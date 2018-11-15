@@ -11,12 +11,12 @@ class PaneSideComponent extends Component {
             option: 0,
             addTravelActive: false,
             modelTravel: {
-                fullName: '',
+                names: '',
                 destinity: '',
-                dateDeparture: '',
+                dateSal: '',
                 dateReturn: '',
-                startingPoint: '',
-                currentCity: ''
+                point: '',
+                city: ''
             },
             travels: []
         }
@@ -52,11 +52,17 @@ class PaneSideComponent extends Component {
     handleForm() {
         const { travels, modelTravel } = this.state;
         if (modelTravel) {
-            travels.push(modelTravel);
+            const service = new RoadsService();
+
+            service.registerRoad(modelTravel)
+                .then((res) => {
+                    this.getRoads();
+                    return console.log(res.data);
+                })
+                .catch((err) => {
+                    console.log('ERROR al registrar viaje', err)
+                })
         }
-        this.setState({ travels})
-        console.log(modelTravel, 'form')
-        console.log(travels, 'travels')
         
     }
     render() {

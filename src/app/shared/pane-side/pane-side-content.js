@@ -12,8 +12,7 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
     let render;
     if (option === 1) {
         return (
-            <div className="main-content-pane">
-            
+            <div className="main-content-pane">            
                 {
                 travels.length
                 ?
@@ -52,51 +51,52 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
                     </div>
                 }
                 {
-                    addTravelActive &&
-                <div className="add-travel-form">
-                    <div className="row">
-                    <div  className="md-form col-md-6">
-                        <i  className="fa fa-user prefix grey-text"></i>
-                        <input type="text" id="fullName" className="form-control" name="fullName" value={model.fullName} onChange={handleChange.bind('fullName')}/>
-                        <label for="form-name">Nombre completo</label>
+                    addTravelActive 
+                    &&
+                        <div className="add-travel-form">
+                            <div className="row">
+                            <div  className="md-form col-md-6">
+                                <i  className="fa fa-user prefix grey-text"></i>
+                                <input type="text" id="names" className="form-control" name="names" value={model.names} onChange={handleChange.bind('names')}/>
+                                <label for="form-name">Nombre completo</label>
+                            </div>
+                            <div  className="md-form col-md-5">
+                                <i  className="fa fa-user prefix grey-text"></i>
+                                <input type="text" id="destinity" className="form-control" name="destinity" value={model.destinity} onChange={handleChange.bind('destinity')}/>
+                                <label for="form-name">Destino</label>
+                            </div>
+                            </div>
+                            <div className="row">
+                                <div  className="md-form col-md-5">
+                                    <i  className="fa fa-user prefix grey-text"></i>
+                                    <input type="date" id="dateSal" className="form-control" name="dateSal" value={model.dateSal} onChange={handleChange.bind('dateSal')}/>
+                                    <label for="form-name" className="dateSal">Fecha de salida</label>
+                                </div>
+                                <div  className="md-form col-md-5">
+                                    <i  className="fa fa-user prefix grey-text"></i>
+                                    <input type="date" id="dateReturn" className="form-control" name="dateReturn" value={model.dateReturn} onChange={handleChange.bind('dateReturn')}/>
+                                    <label for="form-name" className="dateSal">Fecha de retorno</label>
+                                </div>
+                            </div>
+                    
+                            <div className="row">
+                                <div  className="md-form col-md-4">
+                                    <i  className="fa fa-user prefix grey-text"></i>
+                                    <input type="text" id="point" className="form-control" name="point" value={model.point} onChange={handleChange.bind('point')}/>
+                                    <label for="form-name">Punto de partida</label>
+                                </div>
+                                <div  className="md-form col-md-4">
+                                    <i  className="fa fa-user prefix grey-text"></i>
+                                    <input type="text" id="city" className="form-control" value={model.city} onChange={handleChange.bind('city')}/>
+                                    <label for="form-name">Ciudad actual</label>
+                                </div>
+                                <div className="col-md-3">
+                                    <div class="text-center">
+                                    <button class="btn btn-light-blue" onClick={handleForm}>AGREGAR</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div  className="md-form col-md-5">
-                        <i  className="fa fa-user prefix grey-text"></i>
-                        <input type="text" id="destinity" className="form-control" name="destinity" value={model.destinity} onChange={handleChange.bind('destinity')}/>
-                        <label for="form-name">Destino</label>
-                    </div>
-                    </div>
-                <div className="row">
-                    <div  className="md-form col-md-5">
-                        <i  className="fa fa-user prefix grey-text"></i>
-                        <input type="date" id="dateDeparture" className="form-control" name="dateDeparture" value={model.dateDeparture} onChange={handleChange.bind('dateDeparture')}/>
-                        <label for="form-name" className="dateSal">Fecha de salida</label>
-                    </div>
-                    <div  className="md-form col-md-5">
-                        <i  className="fa fa-user prefix grey-text"></i>
-                        <input type="date" id="dateReturn" className="form-control" name="dateReturn" value={model.dateReturn} onChange={handleChange.bind('dateReturn')}/>
-                        <label for="form-name" className="dateSal">Fecha de retorno</label>
-                    </div>
-                </div>
-        
-                <div className="row">
-                    <div  className="md-form col-md-4">
-                        <i  className="fa fa-user prefix grey-text"></i>
-                        <input type="text" id="startingPoint" className="form-control" name="startingPoint" value={model.startingPoint} onChange={handleChange.bind('startingPoint')}/>
-                        <label for="form-name">Punto de partida</label>
-                    </div>
-                    <div  className="md-form col-md-4">
-                        <i  className="fa fa-user prefix grey-text"></i>
-                        <input type="text" id="currentCity" className="form-control" value={model.currentCity} onChange={handleChange.bind('currentCity')}/>
-                        <label for="form-name">Ciudad actual</label>
-                    </div>
-                    <div className="col-md-3">
-                        <div class="text-center">
-                        <button class="btn btn-light-blue" onClick={handleForm}>AGREGAR</button>
-                    </div>
-                  </div>
-                </div>
-            </div>
                 }
             </div>
                 );

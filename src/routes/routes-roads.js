@@ -9,8 +9,9 @@ module.exports = (app, db) => {
       console.log('REQ :', req);
       db.roads.findById(req.params.id).then((result) => res.json(result))
     }); 
-    app.post("/roads", (req, res) => {
-        console.log('REQs', req.body)
+    app.post("/road", (req, res) => {
+      console.log('REQ', req)
+        console.log('REQ.BODY', req.body)
         console.log('HEADERS', req.headers)
           db.roads.create({  
             names: req.body.names,

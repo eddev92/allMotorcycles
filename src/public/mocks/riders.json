@@ -1,0 +1,58 @@
+[
+    {
+        "riderCode": "EDLH#LIM92",
+        "firstName": "Edward",
+        "secondName": "David",
+        "firstLastName": "Llanca",
+        "secondLastName": "Haro",
+        "birthday": "30/12/1992",
+        "mail": "llanca872@gmail.com",
+        "documentId": "47572293",
+        "address": "surco",
+        "nationality": "Peruana",
+        "motorcycleCode": "MTR#CMMMAX200",
+        "teamCode": "CMM#LIM001"
+    },
+    {
+        "riderCode": "AJQL#LIM93",
+        "firstName": "Axel",
+        "secondName": "Jesus",
+        "firstLastName": "Quiroz",
+        "secondLastName": "Losza",
+        "birthday": "30/12/1992",
+        "mail": "llanca872@gmail.com",
+        "documentId": "47572293",
+        "address": "la molina",
+        "nationality": "Peruana",
+        "motorcycleCode": "MTR#CMM190",
+        "teamCode": "CMM#LIM001"
+    },
+    {
+        "riderCode": "DALC#LIM92",
+        "firstName": "Diego",
+        "secondName": "Alberto",
+        "firstLastName": "Lizarraga",
+        "secondLastName": "Calderon",
+        "birthday": "30/12/1992",
+        "mail": "llanca872@gmail.com",
+        "documentId": "47572293",
+        "address": "surco",
+        "nationality": "Peruana",
+        "motorcycleCode": "MTR#CMMRN20",
+        "teamCode": "CMM#LIM001"
+    },
+    {
+        "riderCode": "XXXX#LIM92",
+        "firstName": "",
+        "secondName": "",
+        "firstLastName": "",
+        "secondLastName": "",
+        "birthday": "",
+        "mail": "",
+        "documentId": "",
+        "address": "",
+        "nationality": "",
+        "motorcycleCode": "MTR#XXXXX",
+        "teamCode": "LP#LIM001"
+    }
+]
