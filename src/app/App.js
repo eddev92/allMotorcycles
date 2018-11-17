@@ -21,7 +21,6 @@ class App extends Component {
 
     openModalMoteando(index) {
       const { show } = this.state;
-      console.log('abrir modal moteando')
       if (index === 4) {
         this.setState({ show: true });
       }
@@ -42,15 +41,12 @@ class App extends Component {
     }
     handleOptionRoadOrTip(index) {
       const { option } = this.state;
-      console.log(index, 'index')
       if (index != '') {
         this.setState({ option: index })
       }
     }
 
     resetValuesRoad(evt, key) {
-      console.log(evt)
-      console.log(key, 'resetear')
         this.setState({ option: '' })
     }
     afterOpenModal() {
@@ -62,8 +58,6 @@ class App extends Component {
     }
   render() {
     const { show, option, showModal, disabled } = this.state;
-    console.log(show)
-    console.log(option, 'option ROAD OR TIP')
     return (
       <div>
         <PaneSideComponent show={show} handleOptionRoadOrTip={this.handleOptionRoadOrTip.bind(this)} optionRoadOrTip={option} resetValuesRoad={this.resetValuesRoad.bind(this)} openModal={this.openModal.bind(this)} />
@@ -73,7 +67,7 @@ class App extends Component {
           <div className="main-app" style={{paddingTop: '50px'}}>
           <HomeComponent />
             {/* <MainStoreComponent /> */}
-            <TeamsComponent />
+            <TeamsComponent/>
         </div>
       }
        <Modal showModal={showModal} closeModal={this.closeModal.bind(this)} disabled={disabled} onChange={this.onChange.bind(this)} />

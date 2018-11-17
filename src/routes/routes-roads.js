@@ -1,7 +1,4 @@
 module.exports = (app, db) => {
-  app.get('/state', (req, res) => {
-    console.log('dsadsa')
-  })
     app.get('/roads', (req, res) => {
         db.roads.findAll().then((result) => res.json(result));
     })

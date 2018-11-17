@@ -2,6 +2,7 @@ import React, { Component } from 'React';
 import '../../styles/teams.css';
 import ModalTeams from './modal-teams';
 import TeamsService from '../../services/teams.service';
+import RidersService from '../../services/riders.service';
 
 class TeamsComponent extends Component {
     constructor(props) {
@@ -11,25 +12,43 @@ class TeamsComponent extends Component {
             modalIsOpen: false,
             showDetailRider: false,
             indexRider: '',
-            teams: []
+            teams: [],
+            team: {},
+            riders: []
         }
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.detailRider = this.detailRider.bind(this);
     }
-    openModal() {
-        console.log('open modal')
-        this.setState({ modalIsOpen: true });
+    openModal(team) {
+        console.log(team, 'open modal')
+        if (team) {
+            this.setState({ team, modalIsOpen: true }, () => {
+                this.getRiders(team)
+            });            
+        }
     }
     componentDidMount() {
         this.getTeams();
     }
+
     getTeams() {
         const service = new TeamsService();
         
         service.getTeams()
             .then((res) => {
                 this.setState({ teams: res });
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+    getRiders(team) {
+        const service = new RidersService();
+
+        service.getRiderById(team.teamCode)
+            .then((res) => {
+                this.setState({ riders: res });
             })
             .catch((err) => {
                 console.log(err)
@@ -43,10 +62,39 @@ class TeamsComponent extends Component {
         console.log('detailRider')
         this.setState({ showDetailRider: !showDetailRider });
     }
-    
-    render() {
-        const { modalIsOpen, showDetailRider, teams } = this.state;
+    renderTeams() {
+        const { teams } = this.state;
+        let listTeams = [];
         console.log(teams)
+        if (teams && teams.length > 0) {
+            console.log('entro renderTeams')
+            listTeams = teams.map((team, index) => {
+                return (
+                        <div class="col-xs-12 col-md-4" key={index}>
+                            <div class="serviceItem creativity">
+                                <div class="serviceInfoWrap">
+                                    <div class="serviceInfo">
+                                        <div class="serviceInfoFront"></div>
+                                        <div class="serviceInfoBack">
+                                            <h3>{team.name}</h3>
+                                            <p>{team.description}</p>
+                                            <button type="button" onClick={this.openModal.bind(this, team)} className="btn btn-outline-default waves-effect">Saber más</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+            })
+        }
+        console.log('listTeams', listTeams)
+        return listTeams;
+        
+    }
+    render() {
+        const { modalIsOpen, showDetailRider, teams, team, riders } = this.state;
+        console.log(teams)
+        console.log('riders', riders)
 
         return (
             <div id="services" class="page section">
@@ -60,22 +108,7 @@ class TeamsComponent extends Component {
                         </h3>
                     </div>
                     <div className="row">
-
-                        <div class="col-xs-12 col-md-4">
-                            <div class="serviceItem creativity">
-                                <div class="serviceInfoWrap">
-                                    <div class="serviceInfo">
-                                        <div class="serviceInfoFront"></div>
-                                        <div class="serviceInfoBack">
-                                            <h3>Club Motero de Marcianos</h3>
-                                            <p>Más que un Team, una familia. Desde tiempos inmemorables, 3 locos sobre ruedas, A motear!</p>
-                                            <button type="button" onClick={this.openModal} className="btn btn-outline-default waves-effect">Saber más</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>     
-
+                        {this.renderTeams()}
                     </div>
                 <div class="ten columns marginTop">
                     <p class="introtext">
@@ -91,6 +124,7 @@ class TeamsComponent extends Component {
                 closeModal={this.closeModal}
                 showDetailRider={showDetailRider}
                 handleShowDetail={this.detailRider}
+                team={team}
                 />
          </div>
         )
