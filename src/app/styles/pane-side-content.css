@@ -11,11 +11,9 @@
 .add-travel{
     height: 100px;
     /* margin-top: 60px; */
-    width: 90%;
+    width: 35%;
     bottom: 0%;
-    position: absolute;
-    /* margin: 0; */
-    margin: 16px;
+    margin: 25px auto;
 }
 .main-travels{
     margin-top: 11px;
@@ -55,7 +53,7 @@
 .suggestion-add-travel{
     border: 1px solid white;
     color: white;
-    margin: 50px 80px;
+    margin: 50px 80px 0;
 }
 .empty-travels{
     height: 200px;
@@ -63,4 +61,7 @@
     margin-top: 30px;
     text-align: center;
     padding-top: 50px;
+}
+.viajar {
+    margin-top: 20px;
 }

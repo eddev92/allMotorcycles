@@ -1,40 +1,56 @@
 import React from 'react';
+import Modal from 'react-responsive-modal';
 import './modal.css';
 import Checkbox from 'rc-checkbox';
+const closeSvg = <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z" />
 
-const Modal = ({ showModal, closeModal, disabled = false, onChange = () => {} }) => {
-    return (
-        <div className={showModal ? 'modal fade show' : 'modal fade'} id="modalRoads" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                <div className="modal-header">
-                    <h5 className="modal-title" id="exampleModalLabel">INFÓRMATE ACERCA DE ALGUNAS RUTAS</h5>
-                    <button type="button" className="close" data-dismiss="modal" aria-label="Close"  onClick={closeModal}>
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div className="modal-body">
-                    <div className="row">
-                        <div className="road col-md-8">Lomas de Lachay</div>
-                        <div className="check col-md-4">
-                            <label>
-                                <Checkbox
-                                    defaultChecked
-                                    onChange={onChange}
-                                    disabled={disabled}
-                                />
-                                </label>
-                        </div>
+const ModalRoads = ({ selectRoad = () => {}, showModal, closeModal, disabled = false, onChange = () => {}, roads = [], isSelected, roadInitial = {} }) => {
+    console.log('isSelected', isSelected)
+    const listRoads = roads.length && roads.map((road, index) => {
+        return (
+            <div className="road-check row" key={index}>
+                <div className="col-md-8">{road.nameRoad}</div>
+                    <div className="check col-md-4 checkItem">
+                        <label>
+                            <Checkbox
+                                defaultChecked={isSelected}
+                                // onChange={onChange}
+                                onClick={selectRoad.bind(this, road)}
+                                disabled={(roadInitial && roadInitial.nameRoad && roadInitial.nameRoad.length > 0) ? true : false}
+                            />
+                            </label>
                     </div>
                 </div>
-                <div className="modal-footer">
-                    <button type="button" className="btn btn-primary">Seleccionar</button>
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={closeModal}>Cerrar</button>
-                </div>
-                </div>
-            </div>
-        </div>
+                )
+            })
+    return (
+        <Modal
+        open={showModal}
+        onClose={closeModal}
+        closeIconSvgPath={closeSvg}
+        center={true}
+        >
+                <section className="road-modal">
+                <h2 class="h1-responsive font-weight-bold text-center">Rutas y tips</h2>
+                <p class="grey-text text-center w-responsive mx-auto mb-4">Selecciona alguna de las rutas para visualizar sus detalles.</p>
+                    <div className="row">
+                        <div className="initial col-md-5">
+                        <h4 class="h4-responsive font-weight-bold text-center">Punto de partida</h4>
+                            {listRoads}
+                        </div>
+                        <div className="col-md-2 iconGo">
+                            <span>
+                            <i class="fas fa-angle-right"></i>
+                            </span>
+                        </div>
+                        <div className="finish col-md-5">
+                        <h4 class="h4-responsive font-weight-bold text-center">Destino</h4>
+                            {listRoads}
+                        </div>
+                    </div>
+                </section>
+        </Modal>
     )
 }
 
-export default Modal;
+export default ModalRoads;

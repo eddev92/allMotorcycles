@@ -1,0 +1,62 @@
+[
+    {
+        "nameRoad": "Lomas de Lachay",
+        "roadCode": "00012018#LDL",
+        "long-x-initial": "",
+        "lat-y-initial":"",
+        "description": "",
+        "tips": "001,002,003,004,005",
+        "kms": 0,
+        "long-x-final": "",
+        "lat-y-final": "",
+        "pictureCode": "LIM-CUZ#0001"
+    },
+    {
+        "nameRoad": "Cuzco",
+        "roadCode": "00012018#LDL",
+        "long-x-initial": "",
+        "lat-y-initial":"",
+        "description": "",
+        "tips": "001,002,003,004,005",
+        "kms": 0,
+        "long-x-final": "",
+        "lat-y-final": "",
+        "pictureCode": "LIM-CUZ#0001"
+    },
+    {
+        "nameRoad": "Lunahuana",
+        "roadCode": "00012018#LDL",
+        "long-x-initial": "",
+        "lat-y-initial":"",
+        "description": "",
+        "tips": "001,002,003,004,005",
+        "kms": 0,
+        "long-x-final": "",
+        "lat-y-final": "",
+        "pictureCode": "LIM-CUZ#0001"
+    },
+    {
+        "nameRoad": "Ticlio",
+        "roadCode": "00012018#LDL",
+        "long-x-initial": "",
+        "lat-y-initial":"",
+        "description": "",
+        "tips": "001,002,003,004,005",
+        "kms": 0,
+        "long-x-final": "",
+        "lat-y-final": "",
+        "pictureCode": "LIM-CUZ#0001"
+    },
+    {
+        "nameRoad": "Lima",
+        "roadCode": "00012018#LDL",
+        "long-x-initial": "",
+        "lat-y-initial":"",
+        "description": "",
+        "tips": "001,002,003,004,005",
+        "kms": 0,
+        "long-x-final": "",
+        "lat-y-final": "",
+        "pictureCode": "LIM-CUZ#0001"
+    }
+]

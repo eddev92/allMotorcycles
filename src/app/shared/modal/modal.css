@@ -8,10 +8,28 @@
 .fade{
     transition: opacity .15s linear;
 }
-.modal {
+.road-modal {
     overflow-x: hidden;
     overflow-y: auto;
+    width: 750px;
+}
+.road-modal .row {
+    margin: 15px 15px 0;
 }
 #modalRoads button{
     margin: auto;
+}
+.checkItem {
+    text-align: center;
+}
+.road-modal .iconGo span i{
+    font-size: 4.5em;
+    color: rgb(27, 0, 136);
+    top: 30%;
+    margin: auto 35px;
+    position: absolute;
+}
+.initial, .finish {
+    border: 0.7px solid #eee;
+    padding: 15px 15px;
 }

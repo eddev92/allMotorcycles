@@ -4,7 +4,8 @@ import MenuComponent from './shared/menu';
 import MainStoreComponent from './components/main-store';
 import TeamsComponent from './components/teams';
 import PaneSideComponent from './shared/pane-side';
-import Modal from './shared/modal';
+import ModalRoads from './shared/modal';
+import RoadsTipsService from './services/roads-tips.service';
 
 class App extends Component {
 
@@ -14,10 +15,16 @@ class App extends Component {
           show: false,
           option: '',
           showModal: false,
-          disabled: false
+          disabled: false,
+          roads: [],
+          isSelected: false,
+          roadInitial: {}
         }
+        this.selectRoad = this.selectRoad.bind(this);
     }
-    componentDidMount() {}
+    componentDidMount() {
+      this.getRoadsTips();
+    }
 
     openModalMoteando(index) {
       const { show } = this.state;
@@ -33,6 +40,11 @@ class App extends Component {
         disabled: !state.disabled,
       }));
     }
+    selectRoad(road) {
+      if (road) {
+        this.setState({ roadInitial: road, isSelected: true });
+      }
+    }
     openModal() {
       this.setState({showModal: true});
     }
@@ -45,19 +57,27 @@ class App extends Component {
         this.setState({ option: index })
       }
     }
+    getRoadsTips() {
+      const service = new RoadsTipsService();
 
+      service.getRoadsAndTips()
+        .then((res) => {
+          this.setState({ roads: res });
+        })
+        .catch((err) => {
+          return console.log(err)
+        })
+    }
     resetValuesRoad(evt, key) {
         this.setState({ option: '' })
     }
-    afterOpenModal() {
-      // references are now sync'd and can be accessed.
-      this.subtitle.style.color = '#f00';
-    }
     onChange(e) {
+      
       console.log('Checkbox checked:', e.target.checked);
     }
   render() {
-    const { show, option, showModal, disabled } = this.state;
+    const { show, option, showModal, disabled, roads, isSelected, roadInitial } = this.state;
+    console.log('roads', roads)
     return (
       <div>
         <PaneSideComponent show={show} handleOptionRoadOrTip={this.handleOptionRoadOrTip.bind(this)} optionRoadOrTip={option} resetValuesRoad={this.resetValuesRoad.bind(this)} openModal={this.openModal.bind(this)} />
@@ -70,7 +90,8 @@ class App extends Component {
             <TeamsComponent/>
         </div>
       }
-       <Modal showModal={showModal} closeModal={this.closeModal.bind(this)} disabled={disabled} onChange={this.onChange.bind(this)} />
+      {/* modal en rutas de moteando section */}
+       <ModalRoads selectRoad={this.selectRoad} showModal={showModal} closeModal={this.closeModal.bind(this)} disabled={disabled} onChange={this.onChange.bind(this)} roads={roads} isSelected={isSelected} roadInitial={roadInitial}/>
       </div>
     )
   }

@@ -3,7 +3,7 @@ import '../../styles/roads-tips.css';
 import classNames from 'classnames';
 import MapMotorcycles from './../maps'
 
-const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip = '', resetValuesRoad = () => {}, openModal = () => {}, closeModal }) => {
+const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip = '', resetValuesRoad = () => {}, openModal = () => {}, closeModal, resetOption }) => {
     let style = {};
     console.log(optionRoadOrTip, 'optionRoadOrTip')
     if (optionRoadOrTip === 'ROADS') {
@@ -51,6 +51,7 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
                 <h2 className="text-white text-center linkTo" onClick={handleOptionRoadOrTip.bind(this, 'TIPS')}>Tips</h2>
 
             </div>
+            <a className="btn btn-pink abslute" onClick={resetOption}><i class="fa fa-clone left"></i>Volver</a>
         </div>
     )
 }

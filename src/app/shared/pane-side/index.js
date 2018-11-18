@@ -75,14 +75,14 @@ class PaneSideComponent extends Component {
             {'goLeft': option > 0}
         );
         const styleContentInfo = classNames(
-            'col-md-7 pane-content-info',
+            'col-md-10 pane-content-info',
             {'hidden-div': option > 0}
         )
         return(
             <div className={show ? 'main-side showSide' : 'main-side'} style={{backgroundImage: 'url(images/road.jpg)'}}>
                 <div className="row">
                 {
-                (option === 1 || option === 0 || option === 4) &&
+                !(option > 0) &&
                 <div className={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
@@ -95,7 +95,7 @@ class PaneSideComponent extends Component {
                 </div>
                 }
                 {
-                (option === 2 || option === 0) &&
+                !(option > 0) &&
                     <div className={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
@@ -108,7 +108,7 @@ class PaneSideComponent extends Component {
                     </div>
                 }
                 {
-                (option === 3 || option === 0) &&
+                !(option > 0) &&
                     <div class={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
@@ -121,7 +121,7 @@ class PaneSideComponent extends Component {
                     </div>
                 }
                 <div className={styleContentInfo}>
-                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} />
+                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)}/>
                 </div>
             </div>
         </div>

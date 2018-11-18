@@ -14,9 +14,6 @@ const MapMotorcycles =  withScriptjs(withGoogleMap(({ isMarkerShown, showRoads =
                 <div className="see-roads text-center col-md-6">
                     <button type="button" className="btn btn-outline-primary waves-effect" onClick={showRoads}>Ver rutas</button>
                 </div>
-                {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalRoads">
-                Launch demo modal
-                </button> */}
                 <div className="back-roads text-center col-md-6">
                     <button type="button" className="btn btn-outline-primary waves-effect" onClick={backOptions.bind(this, 'INIT')}>Volver</button>
                 </div>

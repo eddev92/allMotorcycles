@@ -14,7 +14,7 @@
 }
 .main-side .card{
     background-repeat: no-repeat;
-    margin: auto;
+    margin: 30px auto;
     background-size: cover;
     height: 80%;
     opacity: 0.9;
@@ -25,13 +25,12 @@
 .pane-content-info{
     opacity: 0;
     transition: 1s ease-out all;    
-    position: absolute;
     bottom: 0%;
 
 }
 .main-side .row{
     position: absolute;
-    top: 0;
+    top: 13%;
     bottom: 0;
     margin: 0;
     left: 0;
@@ -52,11 +51,20 @@
 }
 .hidden-div{
     opacity: 1 !important;
-    position: absolute;
-    bottom: 0%;
-    right: 3%;
-    top: 13%;
+    bottom: 5%;
     background: rgba(0, 0, 0, 0.7);
     transition: 0.3s ease-out all;
     height: 85%;
+    margin: auto;
+}
+.hidden-div .row {
+    position: relative;
+    height: 100%;
+    top: 0;
+}
+.int-card .btn-pink {
+    margin: auto;
+}
+a.abslute  {
+    margin: 20px auto;
 }
