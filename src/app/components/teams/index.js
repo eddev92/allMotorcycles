@@ -14,14 +14,15 @@ class TeamsComponent extends Component {
             indexRider: '',
             teams: [],
             team: {},
-            riders: []
+            riders: [],
+            positionRiderSelected: 0
         }
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.detailRider = this.detailRider.bind(this);
+        this.handleResetValues = this.handleResetValues.bind(this);
     }
     openModal(team) {
-        console.log(team, 'open modal')
         if (team) {
             this.setState({ team, modalIsOpen: true }, () => {
                 this.getRiders(team)
@@ -57,17 +58,21 @@ class TeamsComponent extends Component {
     closeModal() {
     this.setState({modalIsOpen: false});
     }
-    detailRider() {
-        const { showDetailRider } = this.state;
-        console.log('detailRider')
-        this.setState({ showDetailRider: !showDetailRider });
+    detailRider(index) {
+        this.setState({ showDetailRider: true, positionRiderSelected: index });
+    }
+    handleResetValues(option) {
+        const { showDetailRider, positionRiderSelected  } = this.state;
+
+        if (showDetailRider && (positionRiderSelected === option)) {
+            this.setState({ showDetailRider: false, positionRiderSelected: 0 })        //     return null;
+        }
     }
     renderTeams() {
         const { teams } = this.state;
         let listTeams = [];
-        console.log(teams)
+
         if (teams && teams.length > 0) {
-            console.log('entro renderTeams')
             listTeams = teams.map((team, index) => {
                 return (
                         <div class="col-xs-12 col-md-4" key={index}>
@@ -87,14 +92,11 @@ class TeamsComponent extends Component {
                     )
             })
         }
-        console.log('listTeams', listTeams)
         return listTeams;
         
     }
     render() {
-        const { modalIsOpen, showDetailRider, teams, team, riders } = this.state;
-        console.log(teams)
-        console.log('riders', riders)
+        const { modalIsOpen, showDetailRider, teams, team, riders, positionRiderSelected } = this.state;
 
         return (
             <div id="services" class="page section">
@@ -112,7 +114,6 @@ class TeamsComponent extends Component {
                     </div>
                 <div class="ten columns marginTop">
                     <p class="introtext">
-                        {/* <span class="dropcap">V</span> */}
                         <span class="highlight">(*) Para tu información</span> <br/>
                         Ahora también puedes inscribirte y pertenecer a uno de los Teams, para motear YA!</p>	
                     <p>El proceso de evaluación y/o requisitos esta sujero a criterio de cada Team</p>
@@ -125,6 +126,9 @@ class TeamsComponent extends Component {
                 showDetailRider={showDetailRider}
                 handleShowDetail={this.detailRider}
                 team={team}
+                riders={riders}
+                positionRiderSelected={positionRiderSelected}
+                handleResetValues={this.handleResetValues}
                 />
          </div>
         )

@@ -11,7 +11,10 @@
         "address": "surco",
         "nationality": "Peruana",
         "motorcycleCode": "MTR#CMMMAX200",
-        "teamCode": "CMM#LIM001"
+        "teamCode": "CMM#LIM001",
+        "urlProfile": "./images/edward-rider.png",
+        "role": "Rider",
+        "description": "Rider Rastaman 420!! "
     },
     {
         "riderCode": "AJQL#LIM93",
@@ -25,7 +28,10 @@
         "address": "la molina",
         "nationality": "Peruana",
         "motorcycleCode": "MTR#CMM190",
-        "teamCode": "CMM#LIM001"
+        "teamCode": "CMM#LIM001",
+        "urlProfile": "./images/cholito-rider.png",
+        "role": "Leader",
+        "description": "Cholito rider y ahora en la Brujita lml"
     },
     {
         "riderCode": "DALC#LIM92",
@@ -39,20 +45,26 @@
         "address": "surco",
         "nationality": "Peruana",
         "motorcycleCode": "MTR#CMMRN20",
-        "teamCode": "CMM#LIM001"
+        "teamCode": "CMM#LIM001",
+        "urlProfile": "./images/diego-rider.png",
+        "role": "Rider",
+        "description": "Una warra rider amante de las ardillas."
     },
     {
         "riderCode": "XXXX#LIM92",
-        "firstName": "",
-        "secondName": "",
-        "firstLastName": "",
-        "secondLastName": "",
-        "birthday": "",
-        "mail": "",
-        "documentId": "",
-        "address": "",
-        "nationality": "",
+        "firstName": "XXXX",
+        "secondName": "XXXX",
+        "firstLastName": "XXXX",
+        "secondLastName": "XXXX",
+        "birthday": "XXXX",
+        "mail": "XXXX",
+        "documentId": "XXXX",
+        "address": "XXXX",
+        "nationality": "XXXX",
         "motorcycleCode": "MTR#XXXXX",
-        "teamCode": "LP#LIM001"
+        "teamCode": "LP#LIM001",
+        "urlProfile": "./images/avatar-rider.jpg",
+        "role": "Leader",
+        "description": "Descripcion proximamente"
     }
 ]
