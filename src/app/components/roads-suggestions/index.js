@@ -3,7 +3,7 @@ import '../../styles/roads-tips.css';
 import classNames from 'classnames';
 import MapMotorcycles from './../maps'
 
-const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip = '', resetValuesRoad = () => {}, openModal = () => {}, closeModal, resetOption }) => {
+const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip = '', resetValuesRoad = () => {}, openModal = () => {}, closeModal, resetOption, roadInitial, roadFinish }) => {
     let style = {};
     console.log(optionRoadOrTip, 'optionRoadOrTip')
     if (optionRoadOrTip === 'ROADS') {
@@ -44,6 +44,8 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
                                                 backOptions={resetValuesRoad}
                                                 showRoads={openModal}
                                                 closeModal={closeModal}
+                                                roadFinish={roadFinish}
+                                                roadInitial={roadInitial}
                                                 />}
             </div>
             {(optionRoadOrTip === '' && optionRoadOrTip === '') && <div className="col-md-6 main-roads-tips" style={style}></div>}

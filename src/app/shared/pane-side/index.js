@@ -67,7 +67,7 @@ class PaneSideComponent extends Component {
     }
     render() {
         const { option, addTravelActive, modelTravel, travels } = this.state;
-        const { show, handleOptionRoadOrTip, optionRoadOrTip, resetValuesRoad, openModal } = this.props;
+        const { show, handleOptionRoadOrTip, optionRoadOrTip, resetValuesRoad, openModal, roadInitial, roadFinish } = this.props;
         console.log('option', option)
         console.log(modelTravel)
         const style = classNames(
@@ -121,7 +121,7 @@ class PaneSideComponent extends Component {
                     </div>
                 }
                 <div className={styleContentInfo}>
-                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)}/>
+                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial}/>
                 </div>
             </div>
         </div>

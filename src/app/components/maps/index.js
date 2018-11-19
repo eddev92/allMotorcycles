@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/map.css';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
-const MapMotorcycles =  withScriptjs(withGoogleMap(({ isMarkerShown, showRoads = () => {}, backOptions = () => {} }) => {
+const MapMotorcycles =  withScriptjs(withGoogleMap(({ isMarkerShown, showRoads = () => {}, backOptions = () => {}, roadInitial, roadFinish }) => {
         return (
             <div className="main-map">
             <GoogleMap
@@ -15,7 +15,7 @@ const MapMotorcycles =  withScriptjs(withGoogleMap(({ isMarkerShown, showRoads =
                     <button type="button" className="btn btn-outline-primary waves-effect" onClick={showRoads}>Ver rutas</button>
                 </div>
                 <div className="back-roads text-center col-md-6">
-                    <button type="button" className="btn btn-outline-primary waves-effect" onClick={backOptions.bind(this, 'INIT')}>Volver</button>
+                    <button type="button" className="btn btn-outline-primary waves-effect" onClick={backOptions.bind(this, 'INIT')}>Regresar</button>
                 </div>
             </div>
             </GoogleMap>

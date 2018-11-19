@@ -3,7 +3,7 @@ import '../../styles/pane-side-content.css';
 import Row from './../table/row';
 import RoadsAndSuggestions from '../../components/roads-suggestions'; 
 
-const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => {}, addTravelActive = false, handleChange = () => {}, model = {}, travels = [], handleOptionRoadOrTip = () => {}, optionRoadOrTip, resetValuesRoad, openModal, closeModal, resetOption }) => {
+const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => {}, addTravelActive = false, handleChange = () => {}, model = {}, travels = [], handleOptionRoadOrTip = () => {}, optionRoadOrTip, resetValuesRoad, openModal, closeModal, resetOption, roadInitial, roadFinish  }) => {
     console.log(option, 'option')
     console.log(travels, 'pane-sidecomponent')
     const rows = travels.length && travels.map(travel => {
@@ -104,7 +104,7 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
                 );
     } else if (option === 2) {
         return (
-            <RoadsAndSuggestions handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} closeModal={closeModal} resetOption={resetOption}/>
+            <RoadsAndSuggestions handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} closeModal={closeModal} resetOption={resetOption} roadFinish={roadFinish} roadInitial={roadInitial}/>
         )
     } else {
         return (

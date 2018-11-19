@@ -57,6 +57,9 @@
     height: 85%;
     margin: auto;
 }
+.row.map {
+    top: -30px !important;
+}
 .hidden-div .row {
     position: relative;
     height: 100%;

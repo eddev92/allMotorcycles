@@ -12,6 +12,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     width: 750px;
+    height: 550px;
 }
 .road-modal .row {
     margin: 15px 15px 0;
@@ -32,4 +33,46 @@
 .initial, .finish {
     border: 0.7px solid #eee;
     padding: 15px 15px;
+}
+
+.progress {
+    margin: 43px;
+    width: auto;
+}
+.nameInitial {
+    position: absolute;
+    left: 0;
+    font-size: 1.3em;
+    color: black;
+    margin-left: -25px;
+    margin-top: -29px;
+}
+.nameFinish {
+    position: absolute;
+    right: 0;
+    font-size: 1.3em;
+    margin-top: -29px;
+    color: black;
+    text-align: right;
+}
+.nameInitial span {
+    position: absolute;
+    margin: -15px;
+}
+.nameFinish span {
+    position: absolute;
+    margin: -29px 0px;
+}
+.nameInitial span i  {    
+    font-size: 1.3em;
+    margin: -15px 0;
+}
+.nameFinish span i  {    
+    font-size: 1.3em;
+    margin: -15px 0;
+}
+.main-progress {
+    width: 70%;
+    position: absolute;
+    margin: auto 13%;
 }

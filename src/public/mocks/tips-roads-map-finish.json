@@ -49,7 +49,7 @@
     },
     {
         "nameRoad": "Lima",
-        "roadCode": "00022018#LCTY",
+        "roadCode": "00022018#LCTY#FINISH",
         "long-x-initial": "",
         "lat-y-initial":"",
         "description": "",
