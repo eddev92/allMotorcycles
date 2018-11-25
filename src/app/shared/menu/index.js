@@ -1,13 +1,14 @@
 import React from 'React';
 
-const MenuComponent = ({ handleClick = () => {} }) => {
+const MenuComponent = ({ handleClick = () => {}, openModalStore = () => {} }) => {
+
         return (
             <nav style={{position: 'fixed'}}>	
                 <div className="container">
                     <div className="sixteen columns">
                         <ul className="menu" id="nav">
                             <li><a href="#homepage" onClick={handleClick.bind(this, 1)} >Inicio</a></li>
-                            <li><a href="#folio" onClick={handleClick.bind(this, 2)} >Tienda</a></li>
+                            <li><a href="#folio" onClick={openModalStore} >Tienda</a></li>
                             <li><a href="#services" onClick={handleClick.bind(this, 3)} >Teams</a></li>
                             <li><a href="#about" onClick={handleClick.bind(this, 4)} >Moteando...</a></li>
                             {/* 

@@ -4,12 +4,10 @@ import Row from './../table/row';
 import RoadsAndSuggestions from '../../components/roads-suggestions'; 
 
 const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => {}, addTravelActive = false, handleChange = () => {}, model = {}, travels = [], handleOptionRoadOrTip = () => {}, optionRoadOrTip, resetValuesRoad, openModal, closeModal, resetOption, roadInitial, roadFinish  }) => {
-    console.log(option, 'option')
-    console.log(travels, 'pane-sidecomponent')
     const rows = travels.length && travels.map(travel => {
         return <Row obj={travel} />
     })
-    let render;
+
     if (option === 1) {
         return (
             <div className="main-content-pane">            

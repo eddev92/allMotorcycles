@@ -262,7 +262,7 @@ nav {
 	width: 100%;
 	position: relative;
 	z-index: 1000;
-	height: 50px;
+	height: 60px;
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -890,7 +890,7 @@ p.percent {
 	
 #services {
     padding-top: 0;
-    background-image: radial-gradient(ellipse farthest-corner at 0 45px , #00FFFF -52%, rgba(0, 0, 255, 0) 50%, #def5fd 65%);
+    background-image: radial-gradient(ellipse farthest-corner at 0 45px , #00FFFF -52%, rgba(0, 0, 255, 0) 50%, #def5fd 50%);
     opacity: 1;
     z-index: 0;
 }

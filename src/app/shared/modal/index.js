@@ -4,7 +4,7 @@ import './modal.css';
 import Checkbox from 'rc-checkbox';
 const closeSvg = <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z" />
 
-const ModalRoads = ({ selectRoad = () => {}, showModal, closeModal, disabled = false, onChange = () => {}, roads = [], isSelected, roadInitial = {}, roadsFinish, roadFinish }) => {
+const ModalRoads = ({ selectRoad = () => {}, showModal, closeModal, disabled = false, onChange = () => {}, roads = [], isSelected, roadInitial = {}, roadsFinish, roadFinish, showFullRoad = () => {} }) => {
     console.log('isSelected', isSelected)
     console.log('roadInitial', roadInitial)
     console.log('roadFinish', roadFinish)
@@ -16,7 +16,7 @@ const ModalRoads = ({ selectRoad = () => {}, showModal, closeModal, disabled = f
                     <div className="check col-md-4 checkItem">
                         <label>
                             <Checkbox
-                                checked={road.isSelected}
+                                checked={roadInitial.nameRoad || (roadInitial.nameRoad && roadFinish.nameRoad) ? road.isSelected : false}
                                 // onChange={onChange}
                                 onClick={selectRoad.bind(this, road, true)}
                                 disabled={false}
@@ -33,7 +33,7 @@ const ModalRoads = ({ selectRoad = () => {}, showModal, closeModal, disabled = f
                     <div className="check col-md-4 checkItem">
                         <label>
                             <Checkbox
-                                checked={road.isSelected}
+                                checked={roadFinish.nameRoad || (roadFinish.nameRoad && roadFinish.nameRoad) ? road.isSelected : false}
                                 // onChange={onChange}
                                 onClick={selectRoad.bind(this, road, false)}
                                 disabled={false}
@@ -96,7 +96,7 @@ const ModalRoads = ({ selectRoad = () => {}, showModal, closeModal, disabled = f
                                 </span>
                                 </span>
                             }
-                            {(roadInitial.nameRoad && roadFinish.nameRoad) && <button type="button" className="btn btn-primary col-6">Ver esta ruta</button>}
+                            <button type="button" className="btn btn-primary col-6" onClick={showFullRoad} disabled={!(roadInitial.nameRoad && roadFinish.nameRoad)}>Ver esta ruta</button>
                         </div>
                      
                     </section>

@@ -5,12 +5,12 @@
     background-size: cover;
     position: fixed;
     width: 100%;
-    margin-top: -100%;
-    transition: 1.6s ease-out all;
+    margin-top: -1000px;
+    transition: 1.2s ease-in-out all;
 }
 .main-side.showSide{
     margin-top: 0;
-    transition: 1.6s ease-out all;
+    transition: 1.2s ease-in-out all;
 }
 .main-side .card{
     background-repeat: no-repeat;
@@ -52,13 +52,14 @@
 .hidden-div{
     opacity: 1 !important;
     bottom: 5%;
+    padding: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: 0.3s ease-out all;
     height: 85%;
     margin: auto;
 }
 .row.map {
-    top: -30px !important;
+    top: 110px !important;
 }
 .hidden-div .row {
     position: relative;

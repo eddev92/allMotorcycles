@@ -50,7 +50,7 @@ class PaneSideComponent extends Component {
         this.setState({ addTravelActive: true });
     }
     handleForm() {
-        const { travels, modelTravel } = this.state;
+        const { modelTravel } = this.state;
         if (modelTravel) {
             const service = new RoadsService();
 
@@ -68,8 +68,6 @@ class PaneSideComponent extends Component {
     render() {
         const { option, addTravelActive, modelTravel, travels } = this.state;
         const { show, handleOptionRoadOrTip, optionRoadOrTip, resetValuesRoad, openModal, roadInitial, roadFinish } = this.props;
-        console.log('option', option)
-        console.log(modelTravel)
         const style = classNames(
             'card card-image mb-3 col-md-3',
             {'goLeft': option > 0}

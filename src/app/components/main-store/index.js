@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './../../styles/main-store.css';
+import Modal from 'react-responsive-modal';
 import ProductsServices from '../../services/products.service';
+const closeSvg = <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z" />
 
 class MainStoreComponent extends Component {
   constructor(props) {
@@ -29,63 +31,138 @@ class MainStoreComponent extends Component {
         
     };
 
-    renderProducts() {
-        const { products, categoryActive } = this.state;
-        if (products) {
-            console.log(categoryActive)
-            const prods = products.map((prod, index) => {
-                return (
-                    <article className={(categoryActive === prod.categoryId ) ? 'portfolio isotope-item' : 'portfolio isotope-item isotope-hidden'} key={index} data-category={prod.categoryId}>
-                            <section className="thumbImage">
-                                <img src="images/gallery/gallery-01-thumb.jpg" alt="" className="fullwidth" />
-                                <div className="thumbTextWrap">
-                                    <div className="thumbText">
-                                        <h3 className="sectionTitle">{prod.categoryId}</h3>
-                                        <p>Descripcion de prod</p><br/>
-                                        <p>{prod.price}</p>
-                                        {/* <a className="thumbLink" href="images/gallery/gallery-01.jpg" rel="prettyPhoto[gallerymulti]" title="Multi Images Gallery for one thumbnail"><i className="icon-search"></i></a>
-                                        <a href="images/gallery/gallery-02.jpg" rel="prettyPhoto[gallerymulti]" title="Lorem ipsum dolor sit amet"></a>
-                                        <a href="images/gallery/gallery-01.jpg" rel="prettyPhoto[gallerymulti]" title="Lorem ipsum dolor sit amet"></a>
-                                        <a href="images/gallery/gallery-02.jpg" rel="prettyPhoto[gallerymulti]" title="Lorem ipsum dolor sit amet"></a>
-                                        <a href="images/gallery/gallery-01.jpg" rel="prettyPhoto[gallerymulti]" title="Lorem ipsum dolor sit amet"></a>
-                                        <a href="images/gallery/gallery-02.jpg" rel="prettyPhoto[gallerymulti]" title="Lorem ipsum dolor sit amet"></a> */}
+    render() {
+        const { products } = this.state;
+        const { showModal, closeModal } = this.props;
+        console.log('products', products)
+
+        return (
+            <Modal
+                open={showModal}
+                onClose={closeModal}
+                closeIconSvgPath={closeSvg}
+                center={true}
+                >
+                    <section className="main-store row">
+                            <h2 className="h1-responsive font-weight-bold text-center">ALLMOTORCYCLES STORE</h2>
+                            <p className="grey-text text-center w-responsive mx-auto mb-4">Encuentra diversos accesorios para moteros como tu.</p>
+                        <div className="row row-store">
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
                                     </div>
                                 </div>
-                            </section>
-                        </article>
-                )
-            });
-            return prods;
-        } else {
-            <h1>Se estan cargando los productos...</h1>
-        }
-    }
-
-    render() {
-        return (
-            <div id="folio" className="page section">
-                <div className="container">
-                    <div className="sixteen columns">
-                        <h1>Tienda</h1>
-                        <h3><span className="small">OFF</span> <span className="smallBold">ROAD,</span>
-                        <br /><span className="largeBold">ciudad</span> <span className="large">y sobre todo,</span>
-                        <br/><span className="medium">la mejor</span><span className="mediumBold"> calidad pensando en tu seguridad.</span> 
-                        <br/><span className="author">AllMotorycles Shop Perú</span></h3>
-                    
-                    </div>
-                </div>
-                <div className="gallerySelector row">
-                    <div className="col-md-3 click-menu">Todos</div>
-                    <div className="col-md-3 click-menu" onClick={this.selectCategory.bind(this, 'JCKT#AMS')}>Casacas</div>
-                    <div className="col-md-3 click-menu" onClick={this.selectCategory.bind(this, 'GLVS#AMS')}>Guantes</div>
-                    <div className="col-md-3 click-menu" onClick={this.selectCategory.bind(this, 'PNTS#AMS')}>Pantalones</div>
-                </div>                
-                <section className="portfolio_container" id="portfolio">
-                    {this.renderProducts()}
-                </section>
-                <div className="portfolioBottom" />
-        </div>
-        );
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-4 mb-lg-0 mb-4 item-sell">
+                                <div className="card collection-card z-depth-1-half">
+                                    <div className="view zoom">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
+                                    <div className="stripe light">
+                                        <a>
+                                        <p>Sweatshirt
+                                            <i className="fa fa-angle-right"></i>
+                                        </p>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </Modal>
+            )
     }
 };
 

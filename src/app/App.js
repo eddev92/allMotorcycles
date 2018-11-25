@@ -21,7 +21,8 @@ class App extends Component {
           roadsFinish: [],
           isSelected: false,
           roadInitial: {},
-          roadFinish: {}
+          roadFinish: {},
+          showModalStore: false
         }
         this.selectRoad = this.selectRoad.bind(this);
     }
@@ -78,10 +79,11 @@ class App extends Component {
           
     }
     openModal() {
+      console.log('ver ruta')
       this.setState({showModal: true});
     }
     closeModal() {
-      this.setState({showModal: false});
+      this.setState({showModal: false, roadInitial: {}, roadFinish: {} });
     }
     handleOptionRoadOrTip(index) {
       const { option } = this.state;
@@ -111,30 +113,37 @@ class App extends Component {
           return console.log(err)
         })
     }
+    openModalStore() {
+      const { showModalStore } = this.state;
+
+      this.setState({ showModalStore: !showModalStore });
+    }
     resetValuesRoad(evt, key) {
         this.setState({ option: '' })
     }
-    onChange(e) {
-      
+    onChange(e) {      
       console.log('Checkbox checked:', e.target.checked);
     }
+    showFullRoad() {
+      this.setState({showModal: false});
+    }
   render() {
-    const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish } = this.state;
-    console.log('roads', roadsInitial)
+    const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish, showModalStore } = this.state;
+
     return (
       <div>
         <PaneSideComponent show={show} handleOptionRoadOrTip={this.handleOptionRoadOrTip.bind(this)} optionRoadOrTip={option} resetValuesRoad={this.resetValuesRoad.bind(this)} openModal={this.openModal.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial}/>
-        <MenuComponent handleClick={this.openModalMoteando.bind(this)}/>
+        <MenuComponent handleClick={this.openModalMoteando.bind(this)} openModalStore={this.openModalStore.bind(this)} />
+            <MainStoreComponent showModal={showModalStore} closeModal={this.openModalStore.bind(this)}/>
         {/* <MenuComponent/> */}
       { !show &&
           <div className="main-app" style={{paddingTop: '50px'}}>
           <HomeComponent />
-            {/* <MainStoreComponent /> */}
             <TeamsComponent/>
         </div>
       }
       {/* modal en rutas de moteando section */}
-       <ModalRoads selectRoad={this.selectRoad} showModal={showModal} closeModal={this.closeModal.bind(this)} disabled={disabled} onChange={this.onChange.bind(this)} roads={roadsInitial} isSelected={isSelected} roadInitial={roadInitial} roadsFinish={roadsFinish} roadFinish={roadFinish}/>
+       <ModalRoads selectRoad={this.selectRoad} showModal={showModal} closeModal={this.closeModal.bind(this)} disabled={disabled} onChange={this.onChange.bind(this)} roads={roadsInitial} isSelected={isSelected} roadInitial={roadInitial} roadsFinish={roadsFinish} roadFinish={roadFinish} showFullRoad={this.showFullRoad.bind(this)}/>
       </div>
     )
   }

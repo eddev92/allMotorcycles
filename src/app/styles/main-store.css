@@ -16,3 +16,45 @@
     left: 0px;
     top: 0px;
 }
+.styles_modal__gNwvD {
+    /* max-width: 950px !important; */
+}
+.main-store {
+    height: 550px;
+}
+.main-store h2,.main-store p {
+    height: 60px;
+    margin: 0 auto;
+}
+.main-store p.grey-text {
+    margin-top: 0;
+    height: 35px;
+    margin-bottom: 0 !important;
+}
+.main-store .stripe.light {
+    background-color: rgba(255,255,255,.7);
+}
+.main-store .collection-card .stripe {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem;
+}
+.main-store .collection-card .stripe.light a p {
+    color: #424242;
+}
+.item-sell {
+    margin: 0 auto;
+    padding: 18px;
+}
+.item-sell p {
+    height: auto;
+}
+.row-store {
+    padding: 0 50px;
+    max-height: 410px;
+    overflow-y: auto;
+    width: 100%;
+    margin: auto;
+}

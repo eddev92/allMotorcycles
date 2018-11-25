@@ -42,7 +42,7 @@
 .nameInitial {
     position: absolute;
     left: 0;
-    font-size: 1.3em;
+    font-size: 1em;
     color: black;
     margin-left: -25px;
     margin-top: -29px;
@@ -50,7 +50,7 @@
 .nameFinish {
     position: absolute;
     right: 0;
-    font-size: 1.3em;
+    font-size: 1em;
     margin-top: -29px;
     color: black;
     text-align: right;

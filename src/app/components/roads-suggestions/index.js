@@ -5,7 +5,7 @@ import MapMotorcycles from './../maps'
 
 const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip = '', resetValuesRoad = () => {}, openModal = () => {}, closeModal, resetOption, roadInitial, roadFinish }) => {
     let style = {};
-    console.log(optionRoadOrTip, 'optionRoadOrTip')
+
     if (optionRoadOrTip === 'ROADS') {
         style = {
             backgroundColor: ''
@@ -36,10 +36,10 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
             <div className={btnClass1}>
                 {optionRoadOrTip !== 'ROADS' && <h2 className="text-white text-center linkTo" onClick={handleOptionRoadOrTip.bind(this, 'ROADS')}>Rutas</h2>}
                 {optionRoadOrTip === 'ROADS' && <MapMotorcycles
-                                                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5JwJV3vOOiz6yW4SyuAV5JbeXNGJ45H0&v=3.exp&libraries=geometry,drawing,places"
                                                 isMarkerShown={true}
                                                 loadingElement={<div style={{ height: `100%` }} />}
-                                                containerElement={<div style={{ height: `320px`, marginTop: '50px' }} />}
+                                                containerElement={<div style={{ height: `420px`, marginTop: '50px' }} />}
                                                 mapElement={<div style={{ height: `100%` }} />}
                                                 backOptions={resetValuesRoad}
                                                 showRoads={openModal}
