@@ -39,7 +39,7 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
                                                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5JwJV3vOOiz6yW4SyuAV5JbeXNGJ45H0&v=3.exp&libraries=geometry,drawing,places"
                                                 isMarkerShown={true}
                                                 loadingElement={<div style={{ height: `100%` }} />}
-                                                containerElement={<div style={{ height: `420px`, marginTop: '50px' }} />}
+                                                containerElement={<div style={{ height: `420px`, marginTop: '-30px' }} />}
                                                 mapElement={<div style={{ height: `100%` }} />}
                                                 backOptions={resetValuesRoad}
                                                 showRoads={openModal}
@@ -53,7 +53,7 @@ const RoadsAndSuggestions = ({ handleOptionRoadOrTip = () => {}, optionRoadOrTip
                 <h2 className="text-white text-center linkTo" onClick={handleOptionRoadOrTip.bind(this, 'TIPS')}>Tips</h2>
 
             </div>
-            <a className="btn btn-pink abslute" onClick={resetOption}><i class="fa fa-clone left"></i>Volver</a>
+            {/* <a className="btn btn-pink abslute" onClick={resetOption}><i class="fa fa-clone left"></i>Volver</a> */}
         </div>
     )
 }

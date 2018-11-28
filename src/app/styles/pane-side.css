@@ -55,15 +55,17 @@
     padding: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: 0.3s ease-out all;
-    height: 85%;
+    height: auto;
     margin: auto;
 }
 .row.map {
-    top: 110px !important;
+    /* top: 110px !important; */
+    /* width: 400px; */
 }
 .hidden-div .row {
     position: relative;
     height: 100%;
+    
     top: 0;
 }
 .int-card .btn-pink {

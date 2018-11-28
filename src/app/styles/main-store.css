@@ -52,7 +52,7 @@
     height: auto;
 }
 .row-store {
-    padding: 0 50px;
+    padding: 0 20px;
     max-height: 410px;
     overflow-y: auto;
     width: 100%;

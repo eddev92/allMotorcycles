@@ -1,5 +1,5 @@
 .main-roads-tips{
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,7 +7,8 @@
 }
 .road, .tip {
     transition: 0.6s ease-in-out all;
-    height: 100%;
+    height: auto;
+    padding: 70px;
 }
 .road.col-md-3:hover, .tip.col-md-3:hover {
     background-color: blue;
@@ -18,5 +19,5 @@
 }
 .linkTo{
     cursor: pointer;
-    margin-top: 100%;
+    margin: 30px 0;
 }

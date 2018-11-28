@@ -110,8 +110,8 @@ class PaneSideComponent extends Component {
                     <div class={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
-                                <h3 className="card-title pt-2"><strong className="text-white">MOTOS</strong></h3>
-                                <p>Conoce algunos modelos y sus especificaciones técnicas.</p>
+                                <h3 className="card-title pt-2"><strong className="text-white">SALÓN DE LA FAMA</strong></h3>
+                                <p>Ahora puedes exhibir a tu engreída en nuestro Salón de la Fama y poder recibir opiniones, calificaciones y participar en nuestros sorteos de diversos premios por ranking.</p>
                                 <a className="btn btn-pink" onClick={this.selectOption.bind(this, 3)}><i class="fa fa-clone left"></i>SABER MÁS</a>
                             </div>
                         </div>
@@ -120,6 +120,7 @@ class PaneSideComponent extends Component {
                 }
                 <div className={styleContentInfo}>
                     <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial}/>
+                    <a className="btn btn-pink volver-atras" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>
                 </div>
             </div>
         </div>

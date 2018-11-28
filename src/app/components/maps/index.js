@@ -18,7 +18,7 @@ const MapMotorcycles =  withScriptjs(withGoogleMap(({ isMarkerShown, showRoads =
                     <button type="button" className="btn btn-outline-primary waves-effect" onClick={showRoads}>Ver rutas</button>
                 </div>
                 <div className="back-roads text-center col-md-6">
-                    <button type="button" className="btn btn-outline-primary waves-effect" onClick={backOptions.bind(this, 'INIT')}>Regresar</button>
+                    <button type="button" className="btn btn-outline-primary waves-effect" onClick={backOptions.bind(this, 'INIT')}>Ver tips</button>
                 </div>
             </div>
             </GoogleMap>

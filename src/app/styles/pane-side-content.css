@@ -8,7 +8,6 @@
     margin: 0;
 }
 .add-travel{
-    height: 100px;
     /* margin-top: 60px; */
     width: 35%;
     bottom: 0%;
@@ -32,9 +31,9 @@
 }
 .add-travel-form{
     padding-top: 20px;
-    position: absolute;
     bottom: 7%;
     width: 95%;
+    margin: 20px;
     margin-bottom: -15px;
 }
 .add-travel-form button{
@@ -64,4 +63,21 @@
 }
 .viajar {
     margin-top: 20px;
+}
+.check-info button {
+    padding: 0;
+    height: 50%;
+}
+.check-info a {
+    height: auto;
+    position: absolute;
+    margin: auto 42%;
+    bottom: -11%;
+    height: 40px;
+}
+.volver-atras {
+    position: absolute;
+    margin: 15px 44%;
+    height: 40px;
+    width: 150px;
 }

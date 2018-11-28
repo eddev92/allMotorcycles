@@ -3,9 +3,9 @@
     width: 100%;
 }
 .main-map{
-    position: absolute;
-    width: 100%;
-    bottom: 25%;
+    /* position: absolute; */
+    width: auto;
+    /* bottom: 25%; */
 }
 .main-map button{
     height: 40px;
