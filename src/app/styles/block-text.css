@@ -1,0 +1,11 @@
+.main-content-block-text {
+    border: 1px solid white;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+}
+.main-content-block-text h6, .main-content-block-text h5 {
+    color: white;
+    margin: 7px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
 import './../../styles/detail-product.css';
+import BlockText from '../../shared/block-text';
 
 class DetailProductComponent extends Component {
     constructor(props) {
@@ -39,7 +40,16 @@ class DetailProductComponent extends Component {
                             </div>
                             <div className="col-md-6 detail-item-store">
                                 <div className="info-product">
-
+                                    <BlockText text={'LUCES LED DE 25W CON ADAPTADOR'} infoProductDelivery={false} marginTp={'0'}/>
+                                    <BlockText text={'LUCES LED DE 25W CON ADAPTADOR DE MARCA DSADSAD VIENE CON TUERCAS Y ADAPTADOR PARA CUALQUIER MOTO, ES UBNIVERSAL'} />
+                                </div>
+                                <div className="buy-item row">
+                                    <div className="buy-confirm col-md-6">
+                                    <button type="button" className="btn btn-outline-danger waves-effect">Comprar</button>
+                                    </div>
+                                    <div className="gift-confirm  col-md-6">
+                                    <button type="button" className="btn btn-outline-warning waves-effect">Obsequiar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

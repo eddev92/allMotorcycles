@@ -64,7 +64,7 @@ class MainStoreComponent extends Component {
                                 &&
                              <div className="super-button row" onClick={this.goToback.bind(this)}>
                                 <h3>
-                                    Volver
+                                    VOLVER
                                 </h3>
                              </div>
                             }
