@@ -17,7 +17,7 @@
     top: 0px;
 }
 .styles_modal__gNwvD {
-    /* max-width: 950px !important; */
+    padding: 0 15px 15px;
 }
 .main-store {
     height: 550px;
@@ -45,7 +45,7 @@
     color: #424242;
 }
 .item-sell {
-    margin: 0 auto;
+    margin: -20px auto;
     padding: 18px;
 }
 .item-sell p {
@@ -56,5 +56,21 @@
     max-height: 410px;
     overflow-y: auto;
     width: 100%;
+    margin: auto;
+}
+.super-button {
+    width: auto;
+    margin: auto -15px;
+    height: 40px;
+    text-align: center;
+    transition: 0.2s ease-in-out all;
+    margin: auto -15px -15px;
+    cursor: pointer;
+}
+.super-button:hover {
+    background-color: skyblue;
+    transition: 0.2s ease-in-out all;
+}
+.super-button h3 {
     margin: auto;
 }

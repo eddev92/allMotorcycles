@@ -37,22 +37,38 @@ class MainStoreComponent extends Component {
 
         this.setState({ showDetail: !showDetail })
     }
+    goToback() {
+        this.setState({ showDetail: false })
+    }
     render() {
         const { products, showDetail } = this.state;
         const { showModal, closeModal } = this.props;
         console.log('products', products)
-
+        const styles = {
+            padding: "15px"
+        }
         return (
             <Modal
                 open={showModal}
                 onClose={closeModal}
                 closeIconSvgPath={closeSvg}
                 center={true}
+                styles={styles}
                 >
                     {
                         showDetail
                         ?
-                        <DetailProductComponent showDetail={showDetail} />
+                        <div>
+                            <DetailProductComponent showDetail={showDetail} />
+                            {showDetail 
+                                &&
+                             <div className="super-button row" onClick={this.goToback.bind(this)}>
+                                <h3>
+                                    Volver
+                                </h3>
+                             </div>
+                            }
+                        </div>
                         :
                     <section className="main-store row">
                         <div>

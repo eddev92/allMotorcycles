@@ -19,12 +19,13 @@ app.use((req, res, next) => {
     });
 db.sequelize
   .authenticate()
-  .then(() => {
-    console.log('CONEXION EXITOSA A LA BASE DE DATOS');
-  })
-  .catch(err => {
-    console.error('_ERROR Unable to connect to the database:', err);
+    .then(() => {
+      console.log('CONEXION EXITOSA A LA BASE DE DATOS');
+    })
+    .catch(err => {
+      console.error('_ERROR Unable to connect to the database:', err);
   });
+
 // Connect and config database Mysql
 // Settings 
 app.set('port', process.env.PORT || 3000);
