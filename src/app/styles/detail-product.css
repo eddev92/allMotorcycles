@@ -39,3 +39,6 @@
     margin: auto;
     text-align: center;
 }
+.buy-item button.btn, .gift-confirm button.btn {
+    padding: 7px !important;
+}

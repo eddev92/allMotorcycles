@@ -1,0 +1,14 @@
+.overlay .mask p {
+    font-size: 2.2em !important;
+    font-weight: bold;
+}
+.dashboard-hall-of-fame .container {
+    width: auto !important;
+}
+.option {
+    margin: auto !important;
+}
+
+.dashboard-hall-of-fame {
+    padding-bottom: 50px !important;
+}

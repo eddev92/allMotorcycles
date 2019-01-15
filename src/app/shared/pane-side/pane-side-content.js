@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../styles/pane-side-content.css';
 import Row from './../table/row';
-import RoadsAndSuggestions from '../../components/roads-suggestions'; 
+import RoadsAndSuggestions from '../../components/roads-suggestions';
+import HallOfFameComponent from '../../components/hall-of-fame';
+
 
 const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => {}, addTravelActive = false, handleChange = () => {}, model = {}, travels = [], handleOptionRoadOrTip = () => {}, optionRoadOrTip, resetValuesRoad, openModal, closeModal, resetOption, roadInitial, roadFinish  }) => {
     const rows = travels.length && travels.map(travel => {
@@ -106,7 +108,7 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
         )
     } else {
         return (
-            <h2>SALÓN DE LA FAMA</h2>
+            <HallOfFameComponent />
         )
     }
     
