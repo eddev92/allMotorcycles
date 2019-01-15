@@ -15,13 +15,17 @@ class HallOfFameComponent extends Component {
             showAllRiders: false,
             showRiderSelected: false
         };
-
     }
-
+    handleOption(index) {
+        if (index) {
+            console.log(this.state.selectOption)
+            this.setState({ selectOption: index })
+        }
+    }
     render() {
         const { showAllRiders, selectOption } = this.state;
-      
-            if (selectOption !== 0) {
+      console.log('selectOption', selectOption)
+            if (selectOption > 0) {
                 return ( 
                     <div className="main-hall-of-fame">
                         {showAllRiders ?
@@ -32,7 +36,7 @@ class HallOfFameComponent extends Component {
                     </div>
                 )
             }
-            return <DashoardHallOfFame />
+            return <DashoardHallOfFame handleOption={this.handleOption.bind(this)}/>
             
     }
 }

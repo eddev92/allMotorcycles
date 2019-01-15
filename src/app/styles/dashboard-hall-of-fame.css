@@ -8,7 +8,9 @@
 .option {
     margin: auto !important;
 }
-
+.option .view {
+    cursor: pointer !important;
+}
 .dashboard-hall-of-fame {
     padding-bottom: 50px !important;
 }

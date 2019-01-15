@@ -2,13 +2,13 @@ import React from 'react';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import '../../styles/dashboard-hall-of-fame.css';
 
-const DashoardHallOfFame = ({  }) => {
+const DashoardHallOfFame = ({ handleOption = () => {} }) => {
     return (
         <div className="dashboard-hall-of-fame">
             <MDBContainer className="mt-5">
                 <MDBRow>
                     <MDBCol md="5" className="option">
-                        <MDBView hover>
+                        <MDBView hover onClick={handleOption(1)}>
                         <img
                             src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg"
                             className="img-fluid"
@@ -20,7 +20,7 @@ const DashoardHallOfFame = ({  }) => {
                         </MDBView>
                     </MDBCol>
                     <MDBCol md="5" className="option">
-                        <MDBView hover>
+                        <MDBView hover onClick={handleOption(2)}>
                         <img
                             src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg"
                             className="img-fluid"
