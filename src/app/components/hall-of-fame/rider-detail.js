@@ -1,11 +1,13 @@
 import React from 'react';
 
-const RiderDetail = ({  }) => {
-    return (
-        <div className="main-rider-detail">
+const RiderDetail = ({ option = 0 }) => {
+    if (option === 1) {
+        return (
+            <div className="main-rider-detail">
 
-        </div>
-    )
+            </div>
+        );
+    }
 }
 
 export default RiderDetail;

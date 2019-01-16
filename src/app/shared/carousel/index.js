@@ -2,8 +2,9 @@ import React from 'react';
 import { Carousel, CarouselInner, CarouselItem, Container, Row, Col, Card, CardImage, CardBody, CardTitle, CardText, Button } from 'mdbreact';
 import '../../styles/carousel.css';
 
-const CarouselRiders = ({  }) => {
-    return (
+const CarouselRiders = ({ option = 0 }) => {
+  if (option === 2) {
+      return (
         <Container>
         <Carousel activeItem={1} length={2} slide={true} showControls={true} showIndicators={false} multiItem>
           <CarouselInner>
@@ -95,6 +96,7 @@ const CarouselRiders = ({  }) => {
         </Carousel>
       </Container>
     );
+  }    
 }
 
 export default CarouselRiders;

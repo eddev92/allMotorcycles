@@ -14,29 +14,31 @@ class HallOfFameComponent extends Component {
             riderSelected: {},
             showAllRiders: false,
             showRiderSelected: false
-        };
+        }
+        this.handleOptionFame = this.handleOptionFame.bind(this);
     }
-    handleOption(index) {
-        if (index) {
-            console.log(this.state.selectOption)
-            this.setState({ selectOption: index })
+    handleOptionFame(index) {
+        const { selectOption } = this.state;
+        console.log('entro handleOption', index)
+        if (index > 0) {
+            this.setState({ selectOption: index });
         }
     }
     render() {
         const { showAllRiders, selectOption } = this.state;
-      console.log('selectOption', selectOption)
+      console.log('HallOfFameComponent selectOption', selectOption)
             if (selectOption > 0) {
                 return ( 
                     <div className="main-hall-of-fame">
                         {showAllRiders ?
-                            <RiderDetail />
+                            <RiderDetail option={selectOption}/>
                         :
-                            <CarouselRiders />
+                            <CarouselRiders option={selectOption}/>
                         }
                     </div>
                 )
             }
-            return <DashoardHallOfFame handleOption={this.handleOption.bind(this)}/>
+            return <DashoardHallOfFame handleOption={this.handleOptionFame}/>
             
     }
 }
