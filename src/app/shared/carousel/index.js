@@ -97,7 +97,7 @@ const CarouselRiders = ({ option = 0 }) => {
       </Container>
     );
   }
-  null;
+  return null;
 }
 
 export default CarouselRiders;

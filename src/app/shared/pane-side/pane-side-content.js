@@ -5,7 +5,7 @@ import RoadsAndSuggestions from '../../components/roads-suggestions';
 import HallOfFameComponent from '../../components/hall-of-fame';
 
 
-const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => {}, addTravelActive = false, handleChange = () => {}, model = {}, travels = [], handleOptionRoadOrTip = () => {}, optionRoadOrTip, resetValuesRoad, openModal, closeModal, resetOption, roadInitial, roadFinish  }) => {
+const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => {}, addTravelActive = false, handleChange = () => {}, model = {}, travels = [], handleOptionRoadOrTip = () => {}, optionRoadOrTip, resetValuesRoad, openModal, closeModal, resetOption, roadInitial, roadFinish, hiddenButton }) => {
     const rows = travels.length && travels.map(travel => {
         return <Row obj={travel} />
     })
@@ -48,7 +48,6 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
                         <div className="add-travel text-center">
                             <button type="button" className="btn btn-outline-primary waves-effect" onClick={addTravel}>Agregar un viaje</button>
                         </div>
-                        {/* <a className="btn btn-pink viajar" onClick={resetOption}><i class="fa fa-clone left"></i>Volver</a> */}
                     </div>
                 }
                 {
@@ -97,7 +96,6 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
                                 </div>
                             </div>
                         </div>
-                        {/* <a className="btn btn-pink tabla" onClick={resetOption}><i class="fa fa-clone left"></i>Volver</a> */}
                     </div>
                 }
             </div>
@@ -108,7 +106,7 @@ const PaneSideContent = ({ option = 0, addTravel = () => {}, handleForm = () => 
         )
     } else {
         return (
-            <HallOfFameComponent />
+            <HallOfFameComponent hiddenButton={hiddenButton} />
         )
     }
     

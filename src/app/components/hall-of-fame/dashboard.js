@@ -8,16 +8,16 @@ const DashoardHallOfFame = ({ handleOption = () => {} }) => {
             <MDBContainer className="mt-5">
                 <MDBRow>
                     <MDBCol md="5" className="option" onClick={handleOption.bind(this, 1)}>
-                            <MDBView hover>
-                                <img
-                                    src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg"
-                                    className="img-fluid"
-                                    alt=""                          
-                                />
-                                <MDBMask className="flex-center" overlay="red-strong">
-                                    <p className="white-text">RANKING</p>
-                                </MDBMask>
-                            </MDBView>
+                        <MDBView hover>
+                            <img
+                                src="https://mdbootstrap.com/img/Others/documentation/forest-sm-mini.jpg"
+                                className="img-fluid"
+                                alt=""                          
+                            />
+                            <MDBMask className="flex-center" overlay="red-strong">
+                                <p className="white-text">RANKING</p>
+                            </MDBMask>
+                        </MDBView>
                     </MDBCol>
                     <MDBCol md="5" className="option" onClick={handleOption.bind(this, 2)}>
                         <MDBView hover>

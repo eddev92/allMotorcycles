@@ -18,8 +18,10 @@ class PaneSideComponent extends Component {
                 point: '',
                 city: ''
             },
+            hiddenButton: false,
             travels: []
-        }
+        };
+        this.hiddenButton = this.hiddenButton.bind(this);
     }
     componentDidMount() {
         this.getRoads();
@@ -65,8 +67,15 @@ class PaneSideComponent extends Component {
         }
         
     }
+    hiddenButton() {
+        const { hiddenButton } = this.state;
+        if (hiddenButton) {
+            return this.setState({ hiddenButton: false });
+        }
+        this.setState({ hiddenButton: true });
+    }
     render() {
-        const { option, addTravelActive, modelTravel, travels } = this.state;
+        const { option, addTravelActive, modelTravel, travels, hiddenButton } = this.state;
         const { show, handleOptionRoadOrTip, optionRoadOrTip, resetValuesRoad, openModal, roadInitial, roadFinish } = this.props;
         const style = classNames(
             'card card-image mb-3 col-md-3',
@@ -119,8 +128,8 @@ class PaneSideComponent extends Component {
                     </div>
                 }
                 <div className={styleContentInfo}>
-                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial}/>
-                    <a className="btn btn-pink volver-atras" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>
+                    <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial} hiddenButton={this.hiddenButton} />
+                    {!hiddenButton && <a className="btn btn-pink volver-atras" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
                 </div>
             </div>
         </div>

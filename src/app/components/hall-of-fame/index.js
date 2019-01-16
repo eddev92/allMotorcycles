@@ -16,19 +16,26 @@ class HallOfFameComponent extends Component {
             showRiderSelected: false
         }
         this.handleOptionFame = this.handleOptionFame.bind(this);
+        this.goBack = this.goBack.bind(this);
     }
     handleOptionFame(index) {
-        const { selectOption } = this.state;
         console.log('entro handleOption', index)
         if (index > 0) {
-            this.setState({ selectOption: index });
+            this.setState({ selectOption: index }, () => {
+                this.props.hiddenButton();
+            });
         }
+    }
+    goBack() {
+        this.setState({ selectOption: 0 });
+        this.props.hiddenButton();
     }
     render() {
         const { showAllRiders, selectOption } = this.state;
       console.log('HallOfFameComponent selectOption', selectOption)
+      console.log('showAllRiders', showAllRiders)
             if (selectOption === 0) {
-                return <DashoardHallOfFame handleOption={this.handleOptionFame}/>               
+                return <DashoardHallOfFame handleOption={this.handleOptionFame}/>
             }
             return ( 
                 <div className="main-hall-of-fame">
@@ -37,6 +44,7 @@ class HallOfFameComponent extends Component {
                     :
                         <CarouselRiders option={selectOption}/>
                     }
+                    <a className="btn btn-pink volver-atras" onClick={this.goBack}><i class="fa fa-clone left"></i>Volver</a>
                 </div>
             )
     }

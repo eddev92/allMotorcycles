@@ -1,14 +1,16 @@
 import React from 'react';
+import RankingRiders from './ranking';
 
-const RiderDetail = ({ option = 0 }) => {
+const RiderDetail = ({ option }) => {
+    console.log(option, 'option riderdetail')
     if (option === 1) {
         return (
             <div className="main-rider-detail">
-                <h1>RANKING MOTEROS</h1>
+                <RankingRiders />
             </div>
         );
     }
-    null;
+    return null;
 }
 
 export default RiderDetail;
