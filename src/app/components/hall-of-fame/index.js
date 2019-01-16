@@ -27,19 +27,18 @@ class HallOfFameComponent extends Component {
     render() {
         const { showAllRiders, selectOption } = this.state;
       console.log('HallOfFameComponent selectOption', selectOption)
-            if (selectOption > 0) {
-                return ( 
-                    <div className="main-hall-of-fame">
-                        {showAllRiders ?
-                            <RiderDetail option={selectOption}/>
-                        :
-                            <CarouselRiders option={selectOption}/>
-                        }
-                    </div>
-                )
+            if (selectOption === 0) {
+                return <DashoardHallOfFame handleOption={this.handleOptionFame}/>               
             }
-            return <DashoardHallOfFame handleOption={this.handleOptionFame}/>
-            
+            return ( 
+                <div className="main-hall-of-fame">
+                    {showAllRiders ?
+                        <RiderDetail option={selectOption}/>
+                    :
+                        <CarouselRiders option={selectOption}/>
+                    }
+                </div>
+            )
     }
 }
 
