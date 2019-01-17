@@ -169,7 +169,7 @@ h3.sectionTitle {
 .medium {font-size: 44px !important; text-transform: uppercase !important;}
 .mediumBold {font-size: 44px !important; font-weight:700 !important; text-transform: uppercase !important;}
 .large {font-size: 56px; text-transform: uppercase;}
-.largeBold {font-size: 56px; font-weight:700; text-transform: uppercase;}
+.largeBold {font-size: 56px !important; font-weight:700; text-transform: uppercase;}
 .author {font-size: 18px; font-weight:300;}
 
 h4 {font-size: 22px;}

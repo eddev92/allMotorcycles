@@ -1,5 +1,6 @@
 import React from 'react';
 import RankingRiders from './ranking';
+import '../../styles/rider-detail.css';
 
 const RiderDetail = ({ option }) => {
     console.log(option, 'option riderdetail')

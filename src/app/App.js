@@ -22,9 +22,11 @@ class App extends Component {
           isSelected: false,
           roadInitial: {},
           roadFinish: {},
-          showModalStore: false
+          showModalStore: false,
+          isOpen: false
         }
         this.selectRoad = this.selectRoad.bind(this);
+        this.handleToggle = this.handleToggle.bind(this);
     }
     componentDidMount() {
       this.getRoadsTips();
@@ -33,12 +35,17 @@ class App extends Component {
     openModalMoteando(index) {
       const { show } = this.state;
       if (index === 4) {
-        this.setState({ show: true });
+        this.setState({ show: true, isOpen: false });
       }
       else {
-        this.setState({ show: false });
+        this.setState({ show: false, isOpen: false });
       }
     }
+    handleToggle() {
+      const { isOpen } = this.state;
+
+      this.setState({isOpen: !isOpen});
+    };
     toggle() {
       this.setState((state) => ({
         disabled: !state.disabled,
@@ -128,14 +135,13 @@ class App extends Component {
       this.setState({showModal: false});
     }
   render() {
-    const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish, showModalStore } = this.state;
+    const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish, showModalStore, isOpen } = this.state;
 
     return (
       <div>
         <PaneSideComponent show={show} handleOptionRoadOrTip={this.handleOptionRoadOrTip.bind(this)} optionRoadOrTip={option} resetValuesRoad={this.resetValuesRoad.bind(this)} openModal={this.openModal.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial}/>
-        <MenuComponent handleClick={this.openModalMoteando.bind(this)} openModalStore={this.openModalStore.bind(this)} />
+        <MenuComponent handleClick={this.openModalMoteando.bind(this)} openModalStore={this.openModalStore.bind(this)} isOpen={isOpen} handleToggle={this.handleToggle} />
             <MainStoreComponent showModal={showModalStore} closeModal={this.openModalStore.bind(this)}/>
-        {/* <MenuComponent/> */}
       { !show &&
           <div className="main-app" style={{paddingTop: '50px'}}>
           <HomeComponent />

@@ -39,11 +39,8 @@ class HallOfFameComponent extends Component {
             }
             return ( 
                 <div className="main-hall-of-fame">
-                    {showAllRiders ?
                         <RiderDetail option={selectOption}/>
-                    :
                         <CarouselRiders option={selectOption}/>
-                    }
                     <a className="btn btn-pink volver-atras" onClick={this.goBack}><i class="fa fa-clone left"></i>Volver</a>
                 </div>
             )

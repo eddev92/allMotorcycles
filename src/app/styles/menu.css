@@ -1,0 +1,57 @@
+.main-nav {
+    background-color: black;
+    height: 48px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    z-index: 9;
+    margin-top: -48px;
+}
+.main-nav i {
+    color: white;
+    margin: 12px;
+    font-size: 1.8em !important;
+    cursor: pointer;
+}
+.header-title {
+    text-align: center;
+    padding: 13px;
+}
+.header-title span {
+    margin-left: -30px;
+    font-weight: 800;
+}
+.list-menu ul {
+    background-color: black;
+    width: 15%;
+    height: 100%;
+
+}
+.list-menu ul li a {
+    color: white;
+}
+.list-menu.hidden-menu ul {
+    margin-left: -235px;
+    transition: 0.5s ease-out all;
+}
+.list-menu.show-menu ul {
+    margin-left: 0;
+    transition: 0.5s ease-out all;
+    position: fixed;
+    z-index: 9;
+
+}
+.nav-content {
+    transition: 0.5s ease-out all;
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    margin-top: 48px;
+}
+.initial-nav {
+    margin-top: 48px;
+    position: fixed;
+    z-index: 9;
+}

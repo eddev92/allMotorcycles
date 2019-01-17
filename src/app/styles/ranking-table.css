@@ -39,6 +39,8 @@
   .main-ranking .row ul {
     margin: 0;
     padding: 0;
+    width: 100%;
+    color:white;
   }
  .main-ranking .row ul li {
     margin: 0;
@@ -76,7 +78,6 @@
   }
   .main-ranking .row:hover {
     background-color: rgba(26, 26, 26, 0.9);
-    height: 65px;
   }
   @media only screen and (max-width: 767px) {
     .main-ranking .row:hover {
@@ -203,7 +204,7 @@
     display: block;
     height: 50px;
     width: 100%;
-    color: rgba(128, 128, 128, 0.9);
+    color: white;
   }
   @media only screen and (max-width: 767px) {
     .main-ranking ul.more-content li {
@@ -281,4 +282,9 @@
       color: rgba(255, 255, 255, 0.9);
     }
   }
-  
+.header-ranking {
+  border-bottom: 1px solid white;
+}
+.main-ranking .header-ranking .row:hover {
+  background-color: transparent;
+}

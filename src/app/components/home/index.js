@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './home.css';
 import Slider from "react-slick";
-// import "~slick-carousel/slick/slick.css";
-// import 'slick-theme.css';
 
 class HomeComponent extends Component {
     render() {
