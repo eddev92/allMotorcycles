@@ -1,6 +1,5 @@
 import React from 'React';
 import classNames from 'classnames';
-import { MDBIcon, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
 import './../../styles/menu.css';
 
 const MenuComponent = ({ handleClick = () => {}, openModalStore = () => {}, isOpen, handleToggle = () => {}}) => {
@@ -26,6 +25,7 @@ const MenuComponent = ({ handleClick = () => {}, openModalStore = () => {}, isOp
                     <li><a href="#services" onClick={handleClick.bind(this, 3)} >Teams</a></li>
                     <li><a href="#about" onClick={handleClick.bind(this, 4)} >Moteando</a></li>
                     </ul>
+                    <div className="div-empty" onClick={handleToggle}></div>
                 </div>
             </div>
 
