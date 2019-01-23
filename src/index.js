@@ -7,9 +7,6 @@ const bodyParser = require('body-parser')
 const apiRoads = require('./routes/routes-roads');
 const db = require('../models');
 
-// app.use(express.json());
-// const cors = require('cors');
-
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -29,17 +26,19 @@ db.sequelize
 // Connect and config database Mysql
 // Settings 
 app.set('port', process.env.PORT || 3000);
-// poblar tabla roads
+// definition tabla roads
 db.sequelize.sync().then(() => {
     db.roads.bulkCreate({
-                names: '',
-                destinity: '',
-                dateSal: '',
-                dateReturn: '',
-                point: '',
-                city: ''
+            names: '',
+            destinity: '',
+            dateSal: '',
+            dateReturn: '',
+            point: '',
+            city: ''
         })
 });
+
+// definition tabla riders
 
 apiRoads(app, db);
 // Starting the server

@@ -93,25 +93,25 @@ class PaneSideComponent extends Component {
                 <div className={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
                         <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
-                                <h3 class="card-title pt-2"><strong className="text-white">PLANIFICA UN VIAJE</strong></h3>
+                                <h3 className="card-title pt-2"><strong className="text-white">PLANIFICA UN VIAJE</strong></h3>
                                 <p>Piensa la ruta más larga y divertida que puedas hacer... Ahora imagínate poder publicarla y viajar en grupo con tu hermandad.</p>
-                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 1)}><i class="fa fa-clone left"></i>VIAJAR</a>
+                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 1)}><i className="fa fa-clone left"></i>VIAJAR</a>
                             </div>
                         </div>
-                    {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
+                    {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i className="fa fa-clone left"></i>Volver</a>}
                 </div>
                 }
                 {
                 !(option > 0) &&
                     <div className={style} style={{backgroundImage: 'url(images/road.jpg)'}}>
-                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
+                        <div className="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 black-shadow">
                             <div className="int-card">
                                 <h3 className="card-title pt-2"><strong className="text-white">RUTAS Y TIPS</strong></h3>
                                 <p>Ahora puedes conocer los mejores tips para esa ruta que pronto conquistarás. Conoce de nuestras rutas exploradas y anímate a viajar.</p>
-                                {option !== 2 && <a className="btn btn-pink" onClick={this.selectOption.bind(this, 2)}><i class="fa fa-clone left"></i>SABER MÁS</a>}
+                                {option !== 2 && <a className="btn btn-pink" onClick={this.selectOption.bind(this, 2)}><i className="fa fa-clone left"></i>SABER MÁS</a>}
                             </div>
                         </div>
-                        {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
+                        {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i className="fa fa-clone left"></i>Volver</a>}
                     </div>
                 }
                 {
@@ -121,15 +121,15 @@ class PaneSideComponent extends Component {
                             <div className="int-card">
                                 <h3 className="card-title pt-2"><strong className="text-white">SALÓN DE LA FAMA</strong></h3>
                                 <p>Ahora puedes exhibir a tu engreída en nuestro Salón de la Fama y poder recibir opiniones, calificaciones y participar en nuestros sorteos de diversos premios por ranking.</p>
-                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 3)}><i class="fa fa-clone left"></i>SABER MÁS</a>
+                                <a className="btn btn-pink" onClick={this.selectOption.bind(this, 3)}><i className="fa fa-clone left"></i>SABER MÁS</a>
                             </div>
                         </div>
-                        {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
+                        {option > 0 && <a className="btn btn-pink" onClick={this.resetOption.bind(this)}><i className="fa fa-clone left"></i>Volver</a>}
                     </div>
                 }
                 <div className={styleContentInfo}>
                     <PaneSideContent option={option} addTravel={this.addTravel.bind(this)} addTravelActive={addTravelActive} handleForm={this.handleForm.bind(this)} handleChange={this.handleChange.bind(this)} model={modelTravel} travels={travels} handleOptionRoadOrTip={handleOptionRoadOrTip} optionRoadOrTip={optionRoadOrTip} resetValuesRoad={resetValuesRoad} openModal={openModal} resetOption={this.resetOption.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial} hiddenButton={this.hiddenButton} />
-                    {!hiddenButton && <a className="btn btn-pink volver-atras" onClick={this.resetOption.bind(this)}><i class="fa fa-clone left"></i>Volver</a>}
+                    {!hiddenButton && <a className="btn btn-pink volver-atras" onClick={this.resetOption.bind(this)}><i className="fa fa-clone left"></i>Volver</a>}
                 </div>
             </div>
         </div>

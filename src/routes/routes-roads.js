@@ -18,7 +18,7 @@ module.exports = (app, db) => {
             point: req.body.point,
             city: req.body.city
           }).then((result) => {
-            console.log('REISTRO EXITOSO POST: ', result);
+            console.log('REGISTRO EXITOSO POST: ', result);
             res.json(result.dataValues)
           })
           .catch((error) => {

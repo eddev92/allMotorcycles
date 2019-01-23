@@ -20,10 +20,10 @@ const MenuComponent = ({ handleClick = () => {}, openModalStore = () => {}, isOp
                 </div>
                 <div className={menuClass}>
                     <ul>
-                    <li><a href="#homepage" onClick={handleClick.bind(this, 1)} >Inicio</a></li>
-                    <li><a href="#folio" onClick={openModalStore} >Tienda</a></li>
-                    <li><a href="#services" onClick={handleClick.bind(this, 3)} >Teams</a></li>
-                    <li><a href="#about" onClick={handleClick.bind(this, 4)} >Moteando</a></li>
+                    <li><a href="#homepage" onClick={handleClick.bind(this, 1)} >Inicio <i class="fas fa-home"></i></a></li>
+                    <li><a href="#folio" onClick={openModalStore} >Tienda <i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="#services" onClick={handleClick.bind(this, 3)} >Teams <i class="fas fa-motorcycle"></i></a></li>
+                    <li><a href="#about" onClick={handleClick.bind(this, 4)} >Moteando <i class="fas fa-motorcycle"></i></a></li>
                     </ul>
                     <div className="div-empty" onClick={handleToggle}></div>
                 </div>

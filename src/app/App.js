@@ -7,6 +7,7 @@ import PaneSideComponent from './shared/pane-side';
 import ModalRoads from './shared/modal';
 import classNames from 'classnames';
 import RoadsTipsService from './services/roads-tips.service';
+import InitComponent from './components/init';
 
 class App extends Component {
 
@@ -23,7 +24,8 @@ class App extends Component {
           roadInitial: {},
           roadFinish: {},
           showModalStore: false,
-          isOpen: false
+          isOpen: false,
+          init: true
         }
         this.selectRoad = this.selectRoad.bind(this);
         this.handleToggle = this.handleToggle.bind(this);
@@ -31,9 +33,16 @@ class App extends Component {
     componentDidMount() {
       this.getRoadsTips();
       this.getRoadsTipsFinish();
+      console.log('entroc omponentDidMount')
+    }
+    componentDidUpdate() {
+      // if (this.state.roadsInitial.length && this.state.roadsFinish.length) {
+      //   setTimeout(() => {
+      //     this.setState({ init: false })
+      //   }, 2000);
+      // }
     }
     openModalMoteando(index) {
-      const { show } = this.state;
       if (index === 4) {
         this.setState({ show: true, isOpen: false });
       }
@@ -93,8 +102,7 @@ class App extends Component {
       this.setState({showModal: false, roadInitial: {}, roadFinish: {} });
     }
     handleOptionRoadOrTip(index) {
-      const { option } = this.state;
-      if (index != '') {
+      if (index !== '') {
         this.setState({ option: index })
       }
     }
@@ -135,13 +143,15 @@ class App extends Component {
       this.setState({showModal: false});
     }
   render() {
-    const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish, showModalStore, isOpen } = this.state;
-
+    const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish, showModalStore, isOpen, init } = this.state;
+    if (init) {
+      return <InitComponent />
+    }
     return (
-      <div>
+      <div className="main-app">
         <PaneSideComponent show={show} handleOptionRoadOrTip={this.handleOptionRoadOrTip.bind(this)} optionRoadOrTip={option} resetValuesRoad={this.resetValuesRoad.bind(this)} openModal={this.openModal.bind(this)} roadFinish={roadFinish} roadInitial={roadInitial}/>
         <MenuComponent handleClick={this.openModalMoteando.bind(this)} openModalStore={this.openModalStore.bind(this)} isOpen={isOpen} handleToggle={this.handleToggle} />
-            <MainStoreComponent showModal={showModalStore} closeModal={this.openModalStore.bind(this)}/>
+        <MainStoreComponent showModal={showModalStore} closeModal={this.openModalStore.bind(this)}/>
       { !show &&
           <div className="main-app" style={{paddingTop: '50px'}}>
           <HomeComponent />
