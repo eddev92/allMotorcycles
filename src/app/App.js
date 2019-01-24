@@ -35,13 +35,15 @@ class App extends Component {
       this.getRoadsTipsFinish();
       console.log('entroc omponentDidMount')
     }
+    
     componentDidUpdate() {
-      // if (this.state.roadsInitial.length && this.state.roadsFinish.length) {
-      //   setTimeout(() => {
-      //     this.setState({ init: false })
-      //   }, 2000);
-      // }
+      if (this.state.roadsInitial.length && this.state.roadsFinish.length) {
+        setTimeout(() => {
+          // this.setState({ init: false })
+        }, 2000);
+      }
     }
+
     openModalMoteando(index) {
       if (index === 4) {
         this.setState({ show: true, isOpen: false });
@@ -50,16 +52,13 @@ class App extends Component {
         this.setState({ show: false, isOpen: false });
       }
     }
+  
     handleToggle() {
       const { isOpen } = this.state;
 
       this.setState({isOpen: !isOpen});
     };
-    toggle() {
-      this.setState((state) => ({
-        disabled: !state.disabled,
-      }));
-    }
+
     selectRoad(road, isInitial) {
       const { roadsInitial, roadsFinish } = this.state;
       let aux = [];

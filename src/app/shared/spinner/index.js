@@ -3,7 +3,7 @@ import '../../styles/spinner.css';
 
 const Spinner = () => (
     <div className="containerThing">
-        <a id="titleHeader" title="Hey">AllMotorcycles Perú</a>
+        <a id="titleHeader" title="Hey">ALLMOTORCYCLES PERÚ</a>
             <div className="spinnerContainer">
             <div className="circle centre"></div>
             <div className="inner circle"></div>

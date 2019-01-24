@@ -1,0 +1,95 @@
+.main-init {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row.hiddenOptions {
+    transition: 0.7s ease-out all;
+    margin: -1200px auto;
+}
+.main-init .row .mb-4 {
+    /* margin: auto; */
+}
+.row.showOptions {
+    transition: 0.7s ease-out all;
+    margin: -350px auto;
+}
+/* card menu */
+
+.main-init .card.gradient-card {
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.main-init .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    border: 0;
+    font-weight: 400;
+}
+.main-init .card.gradient-card:focus-within .card-image {
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    width: 7rem;
+    height: 7rem;
+    margin-top: -2rem;
+    margin-left: 1rem;
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.main-init .card.gradient-card:focus-within .card-body {
+    -webkit-transition: all .7s ease-in-out;
+    -o-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    height: auto;
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+}
+.main-init .card.gradient-card .card-body {
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.main-init .card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-border-radius: 0!important;
+    border-radius: 0!important;
+}
+.main-init .carousel-thumbnails .carousel-indicators .active, .picker__box .picker__header .picker__select--month.browser-default, .picker__box .picker__header .picker__select--year.browser-default, .picker__list-item, .white {
+    background-color: #fff!important;
+}
+.main-init .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
