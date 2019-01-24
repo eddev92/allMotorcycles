@@ -115,3 +115,7 @@
     -webkit-border-radius: .25rem !important;
     border-radius: .25rem !important;
 }
+.main-init input {
+    width: 100%;
+    margin: 0;
+}
