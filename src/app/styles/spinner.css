@@ -1,6 +1,6 @@
 .containerThing{
     width: 350px;
-    margin: 45% auto;
+    margin: calc(100vh - 100px) auto;
     transition: 2s ease-out all;
   }
   .containerThing.showOptions {
