@@ -6,14 +6,14 @@
     background-size: cover;
 }
 .row.hiddenOptions {
-    transition: 0.7s ease-out all;
-    margin: -1200px auto;
+    transition: 0.5s ease-out all;
+    margin: -1000px auto;
 }
 .main-init .row .mb-4 {
     /* margin: auto; */
 }
 .row.showOptions {
-    transition: 0.7s ease-out all;
+    transition: 0.5s ease-out all;
     margin: -350px auto;
 }
 /* card menu */

@@ -29,6 +29,7 @@ class App extends Component {
         }
         this.selectRoad = this.selectRoad.bind(this);
         this.handleToggle = this.handleToggle.bind(this);
+        this.enterSiteWeb = this.enterSiteWeb.bind(this);
     }
     componentDidMount() {
       this.getRoadsTips();
@@ -141,10 +142,13 @@ class App extends Component {
     showFullRoad() {
       this.setState({showModal: false});
     }
+    enterSiteWeb() {
+      this.setState({init: false});
+    }
   render() {
     const { show, option, showModal, disabled, roadsInitial, isSelected, roadsFinish, roadInitial, roadFinish, showModalStore, isOpen, init } = this.state;
     if (init) {
-      return <InitComponent />
+      return <InitComponent enterSiteWeb={this.enterSiteWeb}/>
     }
     return (
       <div className="main-app">
