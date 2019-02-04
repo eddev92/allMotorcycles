@@ -78,7 +78,7 @@ class PaneSideComponent extends Component {
         const { option, addTravelActive, modelTravel, travels, hiddenButton } = this.state;
         const { show, handleOptionRoadOrTip, optionRoadOrTip, resetValuesRoad, openModal, roadInitial, roadFinish } = this.props;
         const style = classNames(
-            'card card-image mb-3 col-md-3',
+            'card card-image mb-3 col-xs-4  col-md-3',
             {'goLeft': option > 0}
         );
         const styleContentInfo = classNames(

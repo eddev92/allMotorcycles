@@ -23,7 +23,7 @@ const CarouselRiders = ({ option = 0 }) => {
                   </CardBody>
                 </Card>
                 </Col>
-                <Col md="4" className="clearfix d-none d-md-block">
+                <Col md="4" className="clearfix">
                 <Card className="mb-2">
                   <CardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" />
                   <CardBody>
@@ -36,7 +36,7 @@ const CarouselRiders = ({ option = 0 }) => {
                   </CardBody>
                 </Card>
                 </Col>
-                <Col md="4" className="clearfix d-none d-md-block">
+                <Col md="4" className="clearfix">
                 <Card className="mb-2">
                   <CardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" />
                   <CardBody>
@@ -64,7 +64,7 @@ const CarouselRiders = ({ option = 0 }) => {
                   </CardBody>
                 </Card>
                 </Col>
-                <Col md="4" className="clearfix d-none d-md-block">
+                <Col md="4" className="clearfix">
                 <Card className="mb-2">
                   <CardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(47).jpg" />
                   <CardBody>
@@ -77,7 +77,7 @@ const CarouselRiders = ({ option = 0 }) => {
                   </CardBody>
                 </Card>
                 </Col>
-                <Col md="4" className="clearfix d-none d-md-block">
+                <Col md="4" className="clearfix">
                 <Card className="mb-2">
                   <CardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(48).jpg" />
                   <CardBody>
