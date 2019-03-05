@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/block-text.css';
 
-const BlockText = ({ text = '', value = 0, infoProductDelivery = true, key = '', marginTp = '' }) =>  {
+const BlockText = ({ text = '', text2 = '' , value = 0, infoProductDelivery = true, key = '', marginTp = '' }) =>  {
     
     if (value > 0 && key.length > 0) {
         return (
@@ -17,6 +17,7 @@ const BlockText = ({ text = '', value = 0, infoProductDelivery = true, key = '',
         return (
             <div className="main-content-block-text" style={{marginTop: marginTp ? marginTp : '15px'}}>
                 <div className="content-block">
+                    {{text2} && <h5>{text2}</h5>}
                     <h5>{text}</h5>
                 </div>
                 <div className="content-block">

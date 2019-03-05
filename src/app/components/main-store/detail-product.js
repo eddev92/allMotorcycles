@@ -29,13 +29,7 @@ const DetailProductComponent = ({ showDetail = false, productSelected = {} }) =>
                                 })
                                 :
                                     'Cargando imágenes...'
-                                }                            
-                                {/* <Carousel.Item>
-                                    <img src="https://i.pinimg.com/originals/06/5c/1c/065c1c37b968165324f85d30351fffed.jpg" />
-                                </Carousel.Item>
-                                <Carousel.Item height={500}>
-                                    <img src="https://i.pinimg.com/originals/06/5c/1c/065c1c37b968165324f85d30351fffed.jpg" />
-                                </Carousel.Item> */}
+                                }
                             </Carousel>
                             </div>
                             <DetailContentProduct productSelected={productSelected}/>
