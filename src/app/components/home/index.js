@@ -11,8 +11,9 @@ class HomeComponent extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 3000
+            autoplaySpeed: 2300
           };
+
         return(
             <div id="homepage" className="homepage section">
                 
@@ -20,10 +21,10 @@ class HomeComponent extends Component {
                     
                     {/* <img alt="" className="logo" src="images/logo.png" /> */}
                     <Slider {...settings}>
-                        <div className="slider1"><img alt="" className="" src="images/slide_1.jpg" /> </div>
-                        <div className="slider2"><img alt="" className="" src="images/slider_2.jpg" /> </div>
-                        <div className="slider3"><img alt="" className="" src="images/slider_3.jpg" /> </div>
-                        <div className="slider4"><img alt="" className="" src="images/slider_4.jpg" /> </div>
+                        <div className="slider1"><img alt="" className="img-responsive" src="images/slider_01.jpg" /> </div>
+                        <div className="slider2"><img alt="" className="img-responsive" src="images/slider_02.jpg" /> </div>
+                        <div className="slider3"><img alt="" className="img-responsive" src="images/slider_003.jpeg" /> </div>
+                        <div className="slider4"><img alt="" className="img-responsive" src="images/slider_04.jpeg" /> </div>
                     </Slider>
                 </div>
             </div>

@@ -102,10 +102,9 @@ class TeamsComponent extends Component {
             <div id="services" class="page section">
                 <div class="container servicesContainer">
                     <div class="sixteen columns">
-                        <h1><span>Todos</span><br/>Moteando</h1>
+                        <h1><span>TEAMS</span><br/>MOTEROS</h1>
                         <h3><span class="mediumBold">El Portal</span> <span class="medium">que une a</span>
-                        <br /><span class="medium">toda la hermandad</span> <span class="mediumBold">motera de</span>
-                        <br/><span class="largeBold">LIMA...</span>
+                        <br /><span class="medium">toda la hermandad</span> <span class="mediumBold">motera de Lima...</span>
                         <br /><span class="medium">por ahora.</span> <span class="mediumBold"></span> 
                         </h3>
                     </div>

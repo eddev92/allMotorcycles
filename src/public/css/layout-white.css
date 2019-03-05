@@ -295,6 +295,7 @@ nav ul li a:hover {
 }	
 #homepage .container {
     height: 100%;
+    padding: 0 8%;
 }
 .logo {
 	float: right;
