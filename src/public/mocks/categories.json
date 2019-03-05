@@ -10,5 +10,17 @@
     {
         "idCategory": "PNTS#AMS",
         "Name": "PANTALONES"
+    },
+    {
+        "idCategory": "CMRA#AMS",
+        "Name": "CAMARA"
+    },
+    {
+        "idCategory": "ACCSS#AMS",
+        "Name": "ACCESORIOS"
+    },
+    {
+        "idCategory": "LNTS#AMS",
+        "Name": "LENTES"
     }
 ]

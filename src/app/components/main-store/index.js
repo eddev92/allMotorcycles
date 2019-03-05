@@ -3,6 +3,7 @@ import './../../styles/main-store.css';
 import Modal from 'react-responsive-modal';
 import ProductsServices from '../../services/products.service';
 import DetailProductComponent from './detail-product';
+import CardItem from '../../shared/card-item';
 const closeSvg = <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z" />
 
 class MainStoreComponent extends Component {
@@ -10,8 +11,9 @@ class MainStoreComponent extends Component {
       super(props);
       this.state = {
           products: [],
-          categoryActive: '',
-          showDetail: false
+          categoryActive: {},
+          showDetail: false,
+          productSelected: {}
       }
   }
     componentDidMount() {
@@ -19,7 +21,7 @@ class MainStoreComponent extends Component {
     }
     selectCategory(index) {
         const { categoryActive } = this.state;
-        console.log(index)
+
         this.setState({ categoryActive: index })
     }
     getAllProductsStore() {
@@ -28,22 +30,23 @@ class MainStoreComponent extends Component {
         return service.getAllProducts()
                     .then((response) => {
                         this.setState({ products: response });
-                        console.log(response)
+                        console.log('getAllProducts', response)
                     })
         
     };
-    showDetail() {
+    showDetail(product) {
         const {  showDetail } = this.state;
 
-        this.setState({ showDetail: !showDetail })
+        this.setState({ showDetail: !showDetail, productSelected: product })
     }
     goToback() {
         this.setState({ showDetail: false })
     }
     render() {
-        const { products, showDetail } = this.state;
+        const { products, showDetail, productSelected } = this.state;
         const { showModal, closeModal } = this.props;
-        console.log('products', products)
+        console.log('products :D', products)
+        console.log('productSelected', productSelected)
         const styles = {
             padding: "15px"
         }
@@ -59,7 +62,7 @@ class MainStoreComponent extends Component {
                         showDetail
                         ?
                         <div>
-                            <DetailProductComponent showDetail={showDetail} />
+                            <DetailProductComponent showDetail={showDetail} productSelected={productSelected}/>
                             {showDetail 
                                 &&
                              <div className="super-button row" onClick={this.goToback.bind(this)}>
@@ -75,58 +78,14 @@ class MainStoreComponent extends Component {
                             <h2 className="h1-responsive font-weight-bold text-center">ALLMOTORCYCLES STORE</h2>
                                 <p className="grey-text text-center w-responsive mx-auto mb-4">Encuentra diversos accesorios para moteros como tu.</p>
                             <div className="row row-store">
-                                <div className="col-lg-4 col-md-4 mb-lg-0 mb-4 item-sell">
-                                    <div className="card collection-card z-depth-1-half">
-                                        <div className="view zoom">
-                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
-                                        <div className="stripe light">
-                                            <a onClick={this.showDetail.bind(this)}>
-                                            <p>Luces led</p>
-                                                <h6>S/. 25</h6>
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-4 mb-lg-0 mb-4 item-sell">
-                                    <div className="card collection-card z-depth-1-half">
-                                        <div className="view zoom">
-                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
-                                        <div className="stripe light">
-                                            <a>
-                                            <p>Luces led</p>
-                                                <h6>S/. 25</h6>
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-4 mb-lg-0 mb-4 item-sell">
-                                    <div className="card collection-card z-depth-1-half">
-                                        <div className="view zoom">
-                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
-                                        <div className="stripe light">
-                                            <a>
-                                            <p>Luces led</p>
-                                                <h6>S/. 25</h6>
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-4 mb-lg-0 mb-4 item-sell">
-                                    <div className="card collection-card z-depth-1-half">
-                                        <div className="view zoom">
-                                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/8.jpg" className="img-fluid" alt="" />
-                                        <div className="stripe light">
-                                            <a>
-                                            <p>Luces led</p>
-                                                <h6>S/. 25</h6>
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {products && products.length
+                                    ?
+                                    products.map((prod) => {
+                                        return <CardItem product={prod} handleProduct={this.showDetail.bind(this, prod)}/>
+                                    })
+                                    :
+                                    "Cargando productos..."
+                                }                                
                             </div>
                         </div>
                     </section>

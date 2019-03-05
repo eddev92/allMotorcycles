@@ -1,32 +1,170 @@
 [
     {
-        "idProduct": "G00001",
-        "categoryId": "GLVS#AMS",
-        "name": "guantes pw",
-        "price": "100.00",
-        "SpecificationId": "",
-        "stock": 0,
+        "idProduct": "ACS00001",
+        "categoryId": "ACCSS#AMS",
+        "name": "Direccionales",
+        "price": "53.00",
+        "SpecificationAUx": "Direccionales",
+        "Specification": "LED light for YAMAHA MT01 MT 03 TDM900 FZ1 FZ6 YBR XJ6 FZ Suzuki Dr DRZ DR350 350 650 400 DL DRZ400 Kawasaki Ninja ZX6 ZX6R ZX7 ZX9 ZX9R 047 Honda CB CBR cbr600 rr f2 f4 600 400 929 954 1000 cbr1000 KTM Buell 1125R 1125CR 09",
         "soldQuantity": "",
-        "discount": 0
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
     },
     {
-        "idProduct": "C00001",
-        "categoryId": "JCKT#AMS",
-        "name": "casaca pw",
-        "price": "100.00",
-        "SpecificationId": "",
-        "stock": 0,
+        "idProduct": "ACS00002",
+        "categoryId": "ACCSS#AMS",
+        "name": "Direccionales",
+        "price": "53.00",
+        "SpecificationAUx": "Direccionales",
+        "Specification": "LED light for YAMAHA MT01 MT 03 TDM900 FZ1 FZ6 YBR XJ6 FZ Suzuki Dr DRZ DR350 350 650 400 DL DRZ400 Kawasaki Ninja ZX6 ZX6R ZX7 ZX9 ZX9R 047 Honda CB CBR cbr600 rr f2 f4 600 400 929 954 1000 cbr1000 KTM Buell 1125R 1125CR 09",
         "soldQuantity": "",
-        "discount": 0
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
     },
     {
-        "idProduct": "P00001",
-        "categoryId": "PNTS#AMS",
-        "name": "pantalon pw",
-        "price": "60.00",
-        "SpecificationId": "",
-        "stock": 0,
+        "idProduct": "LNTS00001",
+        "categoryId": "LNTS#AMS",
+        "name": "Goggles 100%",
+        "price": "320.00",
+        "Specification": "Goggles",
+        "SpecificationAUx": "Racecraft MX",
         "soldQuantity": "",
-        "discount": 0
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
+    },
+    {
+        "idProduct": "LNTS00002",
+        "categoryId": "LNTS#AMS",
+        "name": "Goggles",
+        "price": "210.00",
+        "Specification": "Goggles 100%",
+        "SpecificationAUx": "Racecraft MX",
+        "soldQuantity": "",
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
+    },
+    {
+        "idProduct": "LNTS00003",
+        "categoryId": "LNTS#AMS",
+        "name": "Goggles",
+        "price": "150.00",
+        "Specification": "Professional Adult Motocross Goggles",
+        "SpecificationAUx": "Dirtbike ATV Motorcycle Gafas UV Protection Motorbike Ski Snowboard Goggles",
+        "soldQuantity": "",
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
+    },
+    {
+        "idProduct": "CMRA00001",
+        "categoryId": "CMRA#AMS",
+        "name": "GoPro HERO4 Session",
+        "price": "610.00",
+        "Specification": "Cámara de acción, ideal para moteros como tú",
+        "SpecificationAUx": "Waterproof Camera 8MPBlack Certified Refurbished",
+        "soldQuantity": "",
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
+    },
+    {
+        "idProduct": "ACS00003",
+        "categoryId": "ACCSS#AMS",
+        "name": "Reloj Fossil",
+        "price": "570.00",
+        "Specification": "Reloj Fossil... combina con tu elegancia motera.",
+        "SpecificationAUx": "Nate Stainless Steel Watch Black",
+        "soldQuantity": "",
+        "discount": 0,
+        "pictures": [
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            },
+            {
+                "url": "../images/ACS00001/ACS00001_1.png"
+            }
+        ]
     }
 ]

@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     margin: 30px auto;
     background-size: cover;
-    height: 80%;
+    height: auto;
     opacity: 0.9;
     transition: 0.8s ease-out all;
     right: 0;

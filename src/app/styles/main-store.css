@@ -41,6 +41,10 @@
     text-align: center;
     padding: 1.2rem;
 }
+.main-store .collection-card .stripe:hover {
+    background-color: white;
+    transition: 0.5s ease-out all;
+}
 .main-store .collection-card .stripe.light a p {
     color: #424242;
 }
