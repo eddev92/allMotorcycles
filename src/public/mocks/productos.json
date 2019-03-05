@@ -29,21 +29,21 @@
         "name": "Direccionales",
         "price": "53.00",
         "Specification": "Direccionales",
-        "SpecificationAux": "LED light for YAMAHA MT01 MT 03 TDM900 FZ1 FZ6 YBR XJ6 FZ Suzuki Dr DRZ DR350 350 650 400 DL DRZ400 Kawasaki Ninja ZX6 ZX6R ZX7 ZX9 ZX9R 047 Honda CB CBR cbr600 rr f2 f4 600 400 929 954 1000 cbr1000 KTM Buell 1125R 1125CR 09",
+        "SpecificationAUx": "LED light for YAMAHA MT01 MT 03 TDM900 FZ1 FZ6 YBR XJ6 FZ Suzuki Dr DRZ DR350 350 650 400 DL DRZ400 Kawasaki Ninja ZX6 ZX6R ZX7 ZX9 ZX9R 047 Honda CB CBR cbr600 rr f2 f4 600 400 929 954 1000 cbr1000 KTM Buell 1125R 1125CR 09",
         "soldQuantity": "",
         "discount": 0,
         "pictures": [
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00002/ACS00002_1.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00002/ACS00002_2.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00002/ACS00002_3.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00002/ACS00002_4.png"
             }
         ]
     },
@@ -58,16 +58,16 @@
         "discount": 0,
         "pictures": [
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00001/LNTS00001_1.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00001/LNTS00001_2.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00001/LNTS00001_3.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00001/LNTS00001_4.png"
             }
         ]
     },
@@ -75,23 +75,23 @@
         "idProduct": "LNTS00002",
         "categoryId": "LNTS#AMS",
         "name": "Goggles",
-        "price": "210.00",
+        "price": "295.00",
         "Specification": "Goggles 100%",
         "SpecificationAUx": "Racecraft MX",
         "soldQuantity": "",
         "discount": 0,
         "pictures": [
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00002/LNTS00002_1.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00002/LNTS00002_2.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00002/LNTS00002_3.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00002/LNTS00002_4.png"
             }
         ]
     },
@@ -106,16 +106,16 @@
         "discount": 0,
         "pictures": [
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00003/LNTS00003_1.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00003/LNTS00003_2.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00003/LNTS00003_3.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/LNTS00003/LNTS00003_4.png"
             }
         ]
     },
@@ -130,16 +130,16 @@
         "discount": 0,
         "pictures": [
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/CMRA00001/CMRA00001_1.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/CMRA00001/CMRA00001_2.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/CMRA00001/CMRA00001_3.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/CMRA00001/CMRA00001_4.png"
             }
         ]
     },
@@ -154,16 +154,16 @@
         "discount": 0,
         "pictures": [
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00003/ACS00003_1.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00003/ACS00003_2.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00003/ACS00003_3.png"
             },
             {
-                "url": "../images/ACS00001/ACS00001_1.png"
+                "url": "../images/ACS00003/ACS00003_4.png"
             }
         ]
     }
