@@ -4,6 +4,7 @@ import Modal from 'react-responsive-modal';
 import ProductsServices from '../../services/products.service';
 import DetailProductComponent from './detail-product';
 import CardItem from '../../shared/card-item';
+import BuyItem from './buy-item';
 const closeSvg = <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z" />
 
 class MainStoreComponent extends Component {
@@ -13,7 +14,8 @@ class MainStoreComponent extends Component {
           products: [],
           categoryActive: {},
           showDetail: false,
-          productSelected: {}
+          productSelected: {},
+          showBuyItem: false
       }
   }
     componentDidMount() {
@@ -42,14 +44,42 @@ class MainStoreComponent extends Component {
     goToback() {
         this.setState({ showDetail: false })
     }
+    buyItem() {
+        const { productSelected } = this.state;
+
+        if (productSelected) console.log('comprar el item: ', productSelected)
+        this.setState({ showBuyItem: true })
+
+    }
+    resetBuyItem() {
+        this.setState({ showBuyItem: false, showDetail: true });
+    }
+    renderBuyItem() {
+        const { showBuyItem } = this.state;
+        const options = [
+            {
+                price: 100
+            },
+            {
+                price: 200
+            }
+        ]
+
+        if (showBuyItem) {
+            
+            return <BuyItem options={options} goTobackFromBuy={this.resetBuyItem.bind(this)}/>
+        }
+        return null;
+    }
     render() {
-        const { products, showDetail, productSelected } = this.state;
+        const { products, showDetail, productSelected, showBuyItem } = this.state;
         const { showModal, closeModal } = this.props;
-        console.log('products :D', products)
         console.log('productSelected', productSelected)
         const styles = {
             padding: "15px"
         }
+
+     
         return (
             <Modal
                 open={showModal}
@@ -59,10 +89,12 @@ class MainStoreComponent extends Component {
                 styles={styles}
                 >
                     {
+                        showBuyItem ? this.renderBuyItem()
+                        :
                         showDetail
                         ?
                         <div>
-                            <DetailProductComponent showDetail={showDetail} productSelected={productSelected}/>
+                            <DetailProductComponent showDetail={showDetail} productSelected={productSelected} buyItem={this.buyItem.bind(this)}/>
                             {showDetail 
                                 &&
                              <div className="super-button row" onClick={this.goToback.bind(this)}>

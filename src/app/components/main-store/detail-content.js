@@ -1,7 +1,7 @@
 import React from 'react';
 import BlockText from '../../shared/block-text';
 
-const DetailContentProduct = ({ productSelected = {} }) => {
+const DetailContentProduct = ({ productSelected = {}, buyItem = () => {} }) => {
     console.log(productSelected, 'DetailContentProduct')
     return(
         <div className="col-md-6 detail-item-store">
@@ -11,7 +11,7 @@ const DetailContentProduct = ({ productSelected = {} }) => {
             </div>
             <div className="buy-item row">
                 <div className="buy-confirm col-md-6">
-                <button type="button" className="btn btn-outline-danger waves-effect">Comprar</button>
+                <button type="button" onClick={buyItem.bind(productSelected)} className="btn btn-outline-danger waves-effect">Comprar</button>
                 </div>
                 <div className="gift-confirm  col-md-6">
                 <button type="button" className="btn btn-outline-warning waves-effect">Obsequiar</button>

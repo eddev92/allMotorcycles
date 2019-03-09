@@ -42,11 +42,22 @@
     padding: 1.2rem;
 }
 .main-store .collection-card .stripe:hover {
-    background-color: white;
+    background-color: rgba(0,0,0,.3);
     transition: 0.5s ease-out all;
+    color: white;
+}
+.stripe.light h6:hover {
+    color: white;
+    transition: 0.5s ease-out all;
+    color: blue !important;
 }
 .main-store .collection-card .stripe.light a p {
-    color: #424242;
+    color: blue;
+    font-size: 1.1em !important;
+}
+.card .stripe.light h6 {
+    color: blue;
+    font-size: 1.1em !important;
 }
 .item-sell {
     margin: -20px auto;

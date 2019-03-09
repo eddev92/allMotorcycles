@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import './../../styles/detail-product.css';
 import DetailContentProduct from './detail-content';
 
-const DetailProductComponent = ({ showDetail = false, productSelected = {} }) => {
+const DetailProductComponent = ({ showDetail = false, productSelected = {}, buyItem = () => {} }) => {
         if (showDetail) {
             return (
                 <section className="main-detail-product row" style={{backgroundImage: 'url(images/macchu.jpg)'}}>
@@ -32,7 +32,7 @@ const DetailProductComponent = ({ showDetail = false, productSelected = {} }) =>
                                 }
                             </Carousel>
                             </div>
-                            <DetailContentProduct productSelected={productSelected}/>
+                            <DetailContentProduct productSelected={productSelected} buyItem={buyItem}/>
                         </div>
                     </div>
                 </section>
